@@ -8,7 +8,10 @@ import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { ViewSeatsComponent } from './view-seats/view-seats.component';
 import { PassengersComponent } from './passengers/passengers.component';
-import { FormsModule } from '@angular/forms';
+import { SearchBusComponent } from './search-bus/search-bus.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { ViewBusComponent } from './view-bus/view-bus.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +20,16 @@ import { FormsModule } from '@angular/forms';
     RegisterComponent,
     LoginComponent,
     ViewSeatsComponent,
-    PassengersComponent
+    PassengersComponent,
+    SearchBusComponent,
+    ViewBusComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
