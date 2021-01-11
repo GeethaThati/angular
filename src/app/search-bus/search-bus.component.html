@@ -1,0 +1,11 @@
+<div>
+  <form (ngSubmit) = "searchBus()">
+    <input type="text" name="source" placeholder="From" [(ngModel)]=search.source>
+    <input type="text" name="destination" placeholder="To" [(ngModel)]=search.destination>
+    <input type="date" name="date" [(ngModel)]=search.date>
+    <button type="submit">Search</button>
+
+  </form>
+</div>
+
+
