@@ -5,7 +5,8 @@ import { ViewBusComponent } from './view-bus/view-bus.component';
 
 
 const routes: Routes = [
-  { path: 'home' ,component:HomeComponent}
+  { path: 'home' ,component:HomeComponent},
+  { path: 'view-bus',component:ViewBusComponent}
 ];
 
 @NgModule({

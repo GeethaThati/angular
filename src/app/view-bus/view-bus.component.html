@@ -1,19 +1,7 @@
-<p>view-bus works!</p>
-<!-- <ul *ngFor="let t of tripDetails">
-  <li>{{t[0]}}</li>
-  <li>{{t[1]}}</li>
-  <li>{{t[2]}}</li>
-  <li>{{t[3]}}</li>
-  <li>{{t[4]}}</li>
-  <li>{{t[5]}}</li>
-  <li>{{t[6]}}</li>
-  <li>{{t[7]}}</li>
-  <li>{{t[8]}}</li>
-</ul> -->
 
 <div class="box4">
   <table>
-    <div *ngFor = "let t of arr;">
+    <div *ngFor = "let t of arr">
       <tr class="head">
         <td>Bus Name</td>
         <td>Depature</td>
@@ -22,30 +10,42 @@
         <td>Fare</td>
         <td>Seats Available</td>
       </tr>
-    <tr >
-      <td><p><b>{{t[7]}}</b></p></td>
-      <td><p><b>{{t[4]}}</b></p></td>
-      <td><p><b>{{t[6]}}</b></p></td>
-      <td>{{t[5]}}</td>
-      <td>{{t[3]}}</td>
-      <td>{{t[10]}}</td>
-      <button type="submit" id="btn1" style="float:right;">View Seats</button>
+    <tr *ngFor="let bus of t.buses">
+      <td><p><b>{{bus.busName}}</b></p></td>
+      <td><p><b>{{t.dateOfDepature}}</b></p></td>
+      <td><p><b>{{t.duration}}</b></p></td>
+      <td>{{t.dateOfArrival}}</td>
+      <td>{{t.fare}}</td>
+      <td>{{t.seatAvailable}}</td>
+      <button type="submit" id="btn1" style="float:right;" (click)="toggle()">View Seats</button>
+      <div [hidden]="isShowDiv" class="details">
+          <form>
+            <div class="form-control">
+              <label>Choose no of seats:</label>
+              <input type="number" [(ngModel)]="seats" name="seats"> 
+          </div>
+          <div class="form-control">
+              <label>Boarding Points</label>
+              <select>
+                <option></option>
+              </select>
+          </div>
+          <div class="form-control">
+            <label>Dropping Points</label>
+            <select>
+              <option></option>
+            </select>
+        </div>
+          <div class="form-control"> 
+              <label>Fare: {{t.fare*seats}}</label>
+              
+        </div>
+      </form>
+      </div>
     </tr>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore omnis iure blanditiis, veritatis laboriosam incidunt?</p>
+    
   </div>
   </table>
 </div>
 
 
-<!-- <ul *ngFor="let t of arr">
-  <li>{{t[0]}}</li>
-  <li>{{t[1]}}</li>
-  <li>{{t[2]}}</li>
-  <li>{{t[3]}}</li>
-  <li>{{t[4]}}</li>
-  <li>{{t[5]}}</li>
-  <li>{{t[6]}}</li>
-  <li>{{t[7]}}</li>
-  <li>{{t[8]}}</li>
-  <li>{{t[9]}}</li>
-</ul> -->
