@@ -12,6 +12,9 @@ import { SearchBusComponent } from './search-bus/search-bus.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ViewBusComponent } from './view-bus/view-bus.component';
+import { AddBusComponent } from './add-bus/add-bus.component';
+import { UpdateBusRouteComponent } from './update-bus-route/update-bus-route.component';
+import { DeleteBusComponent } from './delete-bus/delete-bus.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { ViewBusComponent } from './view-bus/view-bus.component';
     ViewSeatsComponent,
     PassengersComponent,
     SearchBusComponent,
-    ViewBusComponent
+    ViewBusComponent,
+    AddBusComponent,
+    UpdateBusRouteComponent,
+    DeleteBusComponent
   ],
   imports: [
     BrowserModule,

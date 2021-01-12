@@ -1,9 +1,12 @@
 <div>
-<form (onSubmit)="passengers()">
-    <ul *ngFor= "let s of num">
-     <li>Name: <input type="text" name="name"> </li> <br>
-     <li>Age : <input type="text" name="age"></li><br>
-     <li>Gender: <input type="text" name="gender"></li><br>
+<form (ngSubmit)="passengers()">
+    <br>
+    Route Id: <input type="text" name="routeId" [(ngModel)]=booking.routeId><br>
+    User Id : <input type="text" name="userId" [(ngModel)]=booking.userId><br>
+    <ul *ngFor= "let o of s">
+     <li>Name: <input type="text" name="name" [(ngModel)]=passenger.name> </li> <br>
+     <li>Age : <input type="text" name="age" [(ngModel)]=passenger.age></li><br>
+     <li>Gender: <input type="text" name="gender" [(ngModel)]=passenger.gender></li><br>
     </ul>
     <button>Proceed To Pay</button>
 </form>
