@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AddBusComponent } from './add-bus/add-bus.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { AdminOptionsComponent } from './admin-options/admin-options.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
@@ -27,7 +28,8 @@ const routes: Routes = [
   { path: 'header', component:HeaderComponent},
   { path: 'signin', component:SigninComponent},
   { path: 'admin-login', component:AdminLoginComponent},
-  { path: 'login', component:LoginComponent}
+  { path: 'login', component:LoginComponent},
+  { path: 'dashboard',component:DashboardComponent}
 ];
 
 @NgModule({

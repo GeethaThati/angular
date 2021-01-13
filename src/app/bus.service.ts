@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { tripDetails } from './models/tripDetails';
 import { StopDetails } from './models/StopDetails';
 import { Route } from './models/Route';
+import { Stop } from './models/Stop';
 
 @Injectable({
   providedIn: 'root'

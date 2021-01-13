@@ -19,27 +19,28 @@
       <td>{{t.seatAvailable}}</td>
       <button type="submit" id="btn1" style="float:right;" (click)="toggle()">View Seats</button>
       <div [hidden]="isShowDiv" class="details">
-          <form>
+          <form (ngSubmit)="seatsBook()">
             <div class="form-control">
               <label>Choose no of seats:</label>
-              <input type="number" [(ngModel)]="seats" name="seats"> 
+              <input type="number" [(ngModel)]=book.noOfSeats name="noOfSeats"> 
           </div>
           <div class="form-control">
               <label>Boarding Points</label>
-              <select>
-                <option></option>
+              <select [(ngModel)]=book.boarding name="boarding">
+                <option *ngFor="let b of boarding">{{b.stop}},{{b.time}}</option>
               </select>
           </div>
           <div class="form-control">
             <label>Dropping Points</label>
-            <select>
-              <option></option>
+            <select [(ngModel)]=book.dropping name="dropping">
+              <option *ngFor="let d of dropping">{{d.stop}},{{d.time}}</option>
             </select>
         </div>
           <div class="form-control"> 
-              <label>Fare: {{t.fare*seats}}</label>
+              <label name="amount" [(ngModel)]="amount">Fare: {{t.fare*book.noOfSeats}}</label>
               
         </div>
+        <button type="submit">Proceed</button>
       </form>
       </div>
     </tr>
