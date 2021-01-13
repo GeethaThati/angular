@@ -27,17 +27,18 @@
           <div class="form-control">
               <label>Boarding Points</label>
               <select [(ngModel)]=book.boarding name="boarding">
-                <option *ngFor="let b of boarding">{{b.stop}},{{b.time}}</option>
+                <option *ngFor="let b of boarding">{{b.stop}},{{b.city}}</option>
               </select>
           </div>
           <div class="form-control">
             <label>Dropping Points</label>
             <select [(ngModel)]=book.dropping name="dropping">
-              <option *ngFor="let d of dropping">{{d.stop}},{{d.time}}</option>
+              <option *ngFor="let d of dropping">{{d.stop}},{{d.city}}</option>
             </select>
         </div>
           <div class="form-control"> 
-              <label name="amount" [(ngModel)]="amount">Fare: {{t.fare*book.noOfSeats}}</label>
+            <label>Fare: </label>
+              <p id="fare">{{t.fare*book.noOfSeats}}</p>
               
         </div>
         <button type="submit">Proceed</button>
