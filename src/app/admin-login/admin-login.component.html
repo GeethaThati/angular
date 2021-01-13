@@ -1,0 +1,36 @@
+<p style="text-align:center">{{ message }}</p>
+<form (ngSubmit)="loginCheck()">
+    <div class="container">
+    Enter email : <input type="text" name="t1" [(ngModel)]=adminLogin.email /> <br />
+    Enter password : <input type="password" name="t2" [(ngModel)]=adminLogin.password /> <br />
+    <button type="submit">Login</button> 
+</div>
+
+<!-- <div class="row">
+    <div class="main">
+      <div class="card">
+        <h2 style="text-align: center;">Login</h2>
+        <form>
+          
+            <div class="container">
+              <label for="uname"><b>Enter Email</b></label>
+              <input type="text" placeholder="Enter Username" name="uname" [(ngModel)]=adminLogin.email />
+          
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" [(ngModel)]=adminLogin.password />
+          
+              <button type="submit">Login</button>
+              <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+              </label>
+            </div>
+          
+            <div class="container" style="background-color:#f1f1f1">
+              <button type="button" class="cancelbtn">Cancel</button>
+              <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+          </form>
+      </div>
+    </div>
+  </div> -->
+</form> 

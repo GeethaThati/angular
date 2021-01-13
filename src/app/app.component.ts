@@ -8,6 +8,7 @@ import {FormControl,FormGroup,Validators,FormBuilder,NgForm} from '@angular/form
 })
 export class AppComponent {
   title = 'bus-reservation';
+
   registerForm=new FormGroup({
     firstname:new FormControl('',[Validators.required]),
     lastname:new FormControl('',Validators.required),
@@ -16,4 +17,7 @@ export class AppComponent {
   })
   get firstname(){return this.registerForm.get('firstname')}
   
+
+  img1 : any = "assets/images/signin.png";
+
 }
