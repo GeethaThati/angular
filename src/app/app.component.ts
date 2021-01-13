@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'bus-reservation';
+  img1 : any = "assets/images/signin.png";
 }

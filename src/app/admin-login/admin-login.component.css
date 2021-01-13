@@ -2,9 +2,9 @@
     box-sizing: border-box;
     font-family: 'Muli', 'Baloo Da 2', 'Montserrat', sans-serif;
   }
-
   
-
+  
+  
   .main {   
     width: 100%;
     margin: auto;
@@ -84,7 +84,7 @@
     float: right;
     padding-top: 16px;
   }
-
+  
   img {
     width: auto;
     max-width: 185px;
