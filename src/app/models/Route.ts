@@ -2,7 +2,7 @@ import { Bus } from "./Bus";
 
 export class Route{
   id:number;
-  source:String;
+  source:string;
   destination:string;
   fare:number;
   duration:string;
