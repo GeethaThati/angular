@@ -1,0 +1,85 @@
+/* .search {
+  width: 60%;
+  height: 200px;
+  border-radius: 30px;
+
+  position: absolute;
+  top: 470px;
+  left: 250px;
+  background-color: rgb(234, 234, 247);
+}
+.input {
+  border: none;
+  position: absolute;
+  top: 25%;
+  left: 4%;
+  width: 42%;
+  padding: 12px 20px;
+  box-sizing: border-box;
+}
+.but {
+  border: none;
+  color: white;
+  padding: 15px 100px;
+  text-align: center;
+  background-color: blue;
+  border-radius: 10px;
+  position: absolute;
+  top: 106%;
+  left: 38%;
+} */
+/* 
+.container {
+  width: 80%;
+  margin: auto;
+  padding: 10px;
+  height: 150px;
+  border-radius: 30px;
+  position: absolute;
+  top: 300px;
+  left: 250px;
+  background-color: rgb(234, 234, 247);
+}
+*/
+/* .form-control {
+  margin: auto;
+  display: inline;
+  padding: 10px;
+} */
+
+/* .container {
+  width: 75%;
+  margin-top: 400px;
+  margin-left: 500px;
+  margin-right: 500px;
+  align-content: center;
+  border-bottom: gainsboro;
+} */
+
+.form-inline {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+.form-inline label {
+  margin: 5px 10px 5px 0;
+}
+
+.form-inline input {
+  vertical-align: middle;
+  margin: 5px 10px 5px 0;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+.form-inline button {
+  padding: 10px 20px;
+  background-color: dodgerblue;
+  border: 1px solid #ddd;
+  color: white;
+}
+
+.form-inline button:hover {
+  background-color: royalblue;
+}

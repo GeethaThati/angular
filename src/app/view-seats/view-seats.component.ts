@@ -16,9 +16,9 @@ export class ViewSeatsComponent implements OnInit {
   }
 
   savePassengersCount(){
-  alert(JSON.stringify(this.seat.seatNo));
-  sessionStorage.setItem('seat',JSON.stringify(this.seat.seatNo));
-  this.router.navigate(['passengers']);
+    alert(JSON.stringify(this.seat.seatNo));
+    sessionStorage.setItem('seat',JSON.stringify(this.seat.seatNo));
+    this.router.navigate(['passengers']);
   }
 }
 export class Seat{

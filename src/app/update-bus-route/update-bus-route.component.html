@@ -1,8 +1,8 @@
-<p>update-bus-route works!</p>
+<p style = text-align:center>UPDATE BUS ROUTE</p>
 <form (ngSubmit)="updateRoute()">
-
+<div class="container">
     Bus Number : <input type="text" name="t1" [(ngModel)]=updateBus.busId><br>
     Route Id :<input type="text" name="t2" [(ngModel)]=updateBus.routeId><br>
     <button type="submit">Update</button>
-
+</div>
 </form>
