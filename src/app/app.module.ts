@@ -12,6 +12,7 @@ import { SearchBusComponent } from './search-bus/search-bus.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ViewBusComponent } from './view-bus/view-bus.component';
+import { ThankyouComponent } from './thankyou/thankyou.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ViewBusComponent } from './view-bus/view-bus.component';
     ViewSeatsComponent,
     PassengersComponent,
     SearchBusComponent,
-    ViewBusComponent
+    ViewBusComponent,
+    ThankyouComponent
   ],
   imports: [
     BrowserModule,
