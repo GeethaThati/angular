@@ -43,7 +43,8 @@
             <label>Fare: </label>
               <p id="fare">{{t.fare*book.noOfSeats}}</p>       
         </div>
-        <input type="hidden" value={{t.id}} [(ngModel)]=book.routeId name="routeId">
+        <!-- <input type="hidden" value={{t.id}} [(ngModel)]=book.routeId name="routeId"> -->
+       <div [hidden]="isRoute"> <p id="routeId">{{t.id}}</p></div> 
         <button type="submit">Proceed</button>
       </form>
       </div>

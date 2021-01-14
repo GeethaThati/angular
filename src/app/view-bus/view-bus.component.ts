@@ -16,12 +16,14 @@ export class ViewBusComponent implements OnInit {
   seats: number=1;
   trip:tripDetails = new tripDetails();
   arr:Route[] =[];
-  isShowDiv = false;
+  isShowDiv = true;
+  isRoute = true;
   boarding:Stop[] =[];
   var:Stop[]=[];
   dropping:Stop[]=[];
   book:Book = new Book();
   amount:any;
+  routeId:any;
 
   toggle(){
     this.isShowDiv= !this.isShowDiv;
@@ -29,11 +31,18 @@ export class ViewBusComponent implements OnInit {
 
   seatsBook(){
     this.amount= document.getElementById("fare").innerHTML;
-    alert(this.amount);
+    this.routeId = document.getElementById("routeId").innerHTML;
+    this.book.fare = this.amount;
+    this.book.routeId = this.routeId;
+   // alert(this.routeId);
     //this.book.fare = this.book.noOfSeats*this.arr[0].fare;
-    //alert(this.book.routeId);
+    alert(JSON.stringify(this.book));
     sessionStorage.setItem("BoardingDetails",JSON.stringify(this.book));
+<<<<<<< HEAD
     this.router.navigate(['passengers']);
+=======
+    
+>>>>>>> 2abc5a36d69a0cd87e1b03c265ceab218b245740
   }
 
   constructor(private busService:BusService, private router : Router) { }
