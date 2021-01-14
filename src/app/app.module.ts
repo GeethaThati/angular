@@ -22,6 +22,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaterialModule } from './angular-material.module';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { RegisterComponent } from './register/register.component';
 
 
 
@@ -42,7 +43,8 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
     AdminOptionsComponent,
     HeaderComponent,
     SigninComponent,
-    DashboardComponent
+    DashboardComponent,
+    RegisterComponent
 
   ],
   imports: [
