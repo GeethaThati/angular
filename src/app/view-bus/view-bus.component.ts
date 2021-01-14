@@ -30,7 +30,7 @@ export class ViewBusComponent implements OnInit {
     this.amount= document.getElementById("fare").innerHTML;
     alert(this.amount);
     //this.book.fare = this.book.noOfSeats*this.arr[0].fare;
-    alert(JSON.stringify(this.book));
+    //alert(this.book.routeId);
     sessionStorage.setItem("BoardingDetails",JSON.stringify(this.book));
   }
 
@@ -86,5 +86,5 @@ export class Book{
   boarding:string;
   dropping:string;
   fare:number;
-
+  routeId:number;
 }
