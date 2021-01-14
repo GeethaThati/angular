@@ -18,12 +18,13 @@ export class PassengersComponent implements OnInit {
 
   ngOnInit() {
     this.num=JSON.parse(sessionStorage.getItem('seat'));
-    alert(this.num);
   }
 
+  
   passengers(){
 
   alert(JSON.stringify(this.booking));
+  
 
 }
 
