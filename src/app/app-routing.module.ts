@@ -7,6 +7,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { ThankyouComponent } from './thankyou/thankyou.component';
 import { PassengersComponent } from './passengers/passengers.component';
 import { SearchBusComponent } from './search-bus/search-bus.component';
 import { SigninComponent } from './signin/signin.component';
@@ -17,6 +19,9 @@ import { ViewSeatsComponent } from './view-seats/view-seats.component';
 
 const routes: Routes = [
   { path: 'home' ,component:HomeComponent},
+  {path:'register',component:RegisterComponent},
+  {path:'login',component:LoginComponent},
+  {path:'thankyou',component:ThankyouComponent},
   { path: 'view-seats', component:ViewSeatsComponent},
   { path: 'passengers', component:PassengersComponent},
   { path: 'view-bus',component:ViewBusComponent},
@@ -29,7 +34,9 @@ const routes: Routes = [
   { path: 'signin', component:SigninComponent},
   { path: 'admin-login', component:AdminLoginComponent},
   { path: 'login', component:LoginComponent},
-  { path: 'dashboard',component:DashboardComponent}
+  { path: 'dashboard',component:DashboardComponent},
+  { path: 'register',component:RegisterComponent}
+
 ];
 
 @NgModule({
@@ -37,3 +44,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+  

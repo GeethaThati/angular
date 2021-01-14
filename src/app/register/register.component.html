@@ -1,0 +1,79 @@
+<fieldset>
+    <legend>Get Registered!</legend>
+    <form [formGroup]="registerForm" (ngSubmit)="register()">
+    <table>
+        <tr>
+            <td>
+            <label for="firstname">First Name</label>
+            </td> 
+            <td>
+            <input type="text" class="form-control" formControlName="firstname" [(ngModel)]="user.firstname">
+            <span class="error" *ngIf="firstname.invalid && firstname.touched">First Name is Required</span>
+            </td>  
+        </tr>
+        <br>
+        <tr>
+            <td>
+            <label for="lastname">Last Name</label>
+            </td> 
+            <td>
+            <input type="text" id="lastname" formControlName="lastname" [(ngModel)]="user.lastname">
+            <span class="error" *ngIf="lastname.invalid && firstname.touched">Last Name is Required</span>
+            </td>  
+        </tr>
+        <br>
+        <tr>
+            <td>
+            <label for="email">Email ID</label>
+            </td> 
+            <td>
+            <input type="email" id="email" formControlName="email" [(ngModel)]="user.email">
+            <span class="error" *ngIf="email.invalid && email.touched">Email is Required</span>
+            </td>  
+        </tr>
+        <br>
+        <tr>
+            <td>
+            <label for="password">Password</label>
+            </td> 
+            <td>
+            <input type="password" id="password" formControlName="password" [(ngModel)]="user.password" maxlength="8">
+            </td>  
+        </tr>
+        <br>
+        <tr>
+            <td>
+            <label for="contact">Contact Number</label>
+            </td> 
+            <td>
+            <input type="tel" id="contact" formControlName="contact" [(ngModel)]="user.contact">
+            </td>  
+        </tr>
+        <br>
+        <tr>
+            <td>
+            <label for="gender">Gender</label>
+            </td> 
+            <td>
+            <label for="male">Male</label>
+            <input type="radio" id="male" formControlName="gender" value="male" [(ngModel)]="user.gender">
+            <label for="female">Female</label>
+            <input type="radio" id="female" formControlName="gender" value="female" [(ngModel)]="user.gender">
+            </td>  
+        </tr>
+        <br>
+        <tr>
+            <td>
+                <label for="dob">Date Of Birth</label>
+            </td>
+            <td>
+                <input type="date" id="dob" formControlName="dob" [(ngModel)]="user.dob">
+            </td>
+        </tr>
+        <br>
+        
+    </table>
+    
+    <input type="submit" value="Submit">
+</form>
+</fieldset>
