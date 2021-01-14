@@ -11,12 +11,15 @@
         <td>Seats Available</td>
       </tr>
     <tr *ngFor="let bus of t.buses">
+      <td><p><b>{{bus.busId}}</b></p></td>
+      <td><p><b>{{t.id}}</b></p></td>
       <td><p><b>{{bus.busName}}</b></p></td>
       <td><p><b>{{t.dateOfDepature}}</b></p></td>
       <td><p><b>{{t.duration}}</b></p></td>
       <td>{{t.dateOfArrival}}</td>
       <td>{{t.fare}}</td>
       <td>{{t.seatAvailable}}</td>
+  
       <button type="submit" id="btn1" style="float:right;" (click)="toggle()">View Seats</button>
       <div [hidden]="isShowDiv" class="details">
           <form (ngSubmit)="seatsBook()">
@@ -27,19 +30,20 @@
           <div class="form-control">
               <label>Boarding Points</label>
               <select [(ngModel)]=book.boarding name="boarding">
-                <option *ngFor="let b of boarding">{{b.stop}},{{b.time}}</option>
+                <option *ngFor="let b of boarding">{{b.stop}},{{b.city}}</option>
               </select>
           </div>
           <div class="form-control">
             <label>Dropping Points</label>
             <select [(ngModel)]=book.dropping name="dropping">
-              <option *ngFor="let d of dropping">{{d.stop}},{{d.time}}</option>
+              <option *ngFor="let d of dropping">{{d.stop}},{{d.city}}</option>
             </select>
         </div>
           <div class="form-control"> 
-              <label name="amount" [(ngModel)]="amount">Fare: {{t.fare*book.noOfSeats}}</label>
-              
+            <label>Fare: </label>
+              <p id="fare">{{t.fare*book.noOfSeats}}</p>       
         </div>
+        <input type="hidden" value={{t.id}} [(ngModel)]=book.routeId name="routeId">
         <button type="submit">Proceed</button>
       </form>
       </div>

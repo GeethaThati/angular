@@ -20,15 +20,18 @@ export class ViewBusComponent implements OnInit {
   var:Stop[]=[];
   dropping:Stop[]=[];
   book:Book = new Book();
-  amount:number;
+  amount:any;
 
   toggle(){
     this.isShowDiv= !this.isShowDiv;
   }
 
   seatsBook(){
-    this.book.fare=this.amount;
-    alert(JSON.stringify(this.book));
+    this.amount= document.getElementById("fare").innerHTML;
+    alert(this.amount);
+    //this.book.fare = this.book.noOfSeats*this.arr[0].fare;
+    //alert(this.book.routeId);
+    sessionStorage.setItem("BoardingDetails",JSON.stringify(this.book));
   }
 
   constructor(private busService:BusService) { }
@@ -52,7 +55,7 @@ export class ViewBusComponent implements OnInit {
           // }
          // alert(response[0]);
           //this.boarding.push(response[0]);
-          //alert(JSON.stringify(response));
+          alert(JSON.stringify(response));
           //alert(this.boarding[0].stop);
           
         }
@@ -83,5 +86,5 @@ export class Book{
   boarding:string;
   dropping:string;
   fare:number;
-
+  routeId:number;
 }
