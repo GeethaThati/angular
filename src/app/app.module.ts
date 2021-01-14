@@ -20,6 +20,9 @@ import { AdminOptionsComponent } from './admin-options/admin-options.component';
 import { HeaderComponent } from './header/header.component';
 import { SigninComponent } from './signin/signin.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { RegisterComponent } from './register/register.component';
+import { AddRouteComponent } from './add-route/add-route.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -39,7 +42,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     AdminOptionsComponent,
     HeaderComponent,
     SigninComponent,
-    DashboardComponent
+    DashboardComponent,
+    RegisterComponent,
+    AddRouteComponent
 
   ],
   imports: [
@@ -47,7 +52,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -9,7 +9,7 @@ import { Router, RouterEvent } from '@angular/router';
 export class ViewSeatsComponent implements OnInit {
 
   seat: Seat = new Seat();
-  seats:number;
+  seats:number = 5;
   constructor(private router: Router) { }
 
   ngOnInit() {
@@ -17,7 +17,8 @@ export class ViewSeatsComponent implements OnInit {
 
   savePassengersCount(){
     alert(JSON.stringify(this.seat.seatNo));
-    sessionStorage.setItem('seat',JSON.stringify(this.seat.seatNo));
+    sessionStorage.setItem('seat',JSON.stringify(this.seats));
+    alert(this.seats);
     this.router.navigate(['passengers']);
   }
 }

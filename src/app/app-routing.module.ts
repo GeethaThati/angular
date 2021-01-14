@@ -15,6 +15,7 @@ import { SigninComponent } from './signin/signin.component';
 import { UpdateBusRouteComponent } from './update-bus-route/update-bus-route.component';
 import { ViewBusComponent } from './view-bus/view-bus.component';
 import { ViewSeatsComponent } from './view-seats/view-seats.component';
+import { AddRouteComponent } from './add-route/add-route.component';
 
 
 const routes: Routes = [
@@ -35,7 +36,8 @@ const routes: Routes = [
   { path: 'admin-login', component:AdminLoginComponent},
   { path: 'login', component:LoginComponent},
   { path: 'dashboard',component:DashboardComponent},
-  { path: 'register',component:RegisterComponent}
+  { path: 'register',component:RegisterComponent},
+  { path: 'add-route',component:AddRouteComponent}
 
 ];
 
