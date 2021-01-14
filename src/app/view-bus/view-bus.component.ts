@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { BusService } from '../bus.service';
 import { Route } from '../models/Route';
 import { Stop } from '../models/Stop';
@@ -32,9 +33,10 @@ export class ViewBusComponent implements OnInit {
     //this.book.fare = this.book.noOfSeats*this.arr[0].fare;
     //alert(this.book.routeId);
     sessionStorage.setItem("BoardingDetails",JSON.stringify(this.book));
+    this.router.navigate(['passengers']);
   }
 
-  constructor(private busService:BusService) { }
+  constructor(private busService:BusService, private router : Router) { }
 
   ngOnInit() {
     //alert(sessionStorage.getItem('routeDetails'));
@@ -58,6 +60,7 @@ export class ViewBusComponent implements OnInit {
           alert(JSON.stringify(response));
           //alert(this.boarding[0].stop);
           
+          
         }
         
       );
@@ -70,13 +73,10 @@ export class ViewBusComponent implements OnInit {
            //this.dropping.push(response);
            // alert(this.dropping[0].stop);
          // alert(JSON.stringify(this.dropping));
+        
           }
       );
-    }
-   
-
-    
-    
+    } 
   }
 
 }

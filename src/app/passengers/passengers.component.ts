@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Booking } from '../models/booking';
 import { Passenger } from '../models/passenger';
 import { PassengerService } from '../passenger.service';
+import { Book } from '../view-bus/view-bus.component';
+
 
 @Component({
   selector: 'app-passengers',
@@ -10,23 +12,27 @@ import { PassengerService } from '../passenger.service';
 })
 export class PassengersComponent implements OnInit {
 
-  seats :number[];
+  seats :number[] = [];
   booking : Booking;
   passenger : Passenger = new Passenger();
   num:number;
   response : any;
+  book: Book = new Book();
 
   constructor(private passengerService  : PassengerService) { }
 
   ngOnInit() {
-    this.num=JSON.parse(sessionStorage.getItem('seat'));
+
+    this.book=JSON.parse(sessionStorage.getItem('BoardingDetails'));
+    this.num = this.book.noOfSeats;
     this.booking = new Booking(this.num);
-  //  alert(this.num);
+   // alert(JSON.stringify(this.num));
+    
      for(let x=1; x <=this.num; x++){
-        alert(x);
+        //alert(x);
           this.seats.push(x);
       }
-    //  alert(JSON.stringify(this.seats));
+      //alert(JSON.stringify(this.seats));
     this.booking.routeId=parseInt(sessionStorage.getItem('num'));
   }
 
