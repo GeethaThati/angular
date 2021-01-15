@@ -39,14 +39,17 @@ export class ViewBusComponent implements OnInit {
     //alert(JSON.stringify(bus));
     //alert(d.dateOfDepature);
     this.amount= document.getElementById("fare").innerHTML;
-    this.routeId = document.getElementById("routeId").innerHTML;
+  //  this.routeId = document.getElementById("routeId").innerHTML;
    // this.r = document.getElementById("r").innerHTML;
     // alert(this.r);
     this.book.fare = this.amount;
-    this.book.routeId = this.routeId;
+    this.book.routeId = d.id;
     this.book.busName = bus.busName;
     this.book.date = d.dateOfDepature;
     this.book.duration = d.duration;
+    this.book.busId = bus.busId;
+    this.book.source = d.source;
+    this.book.destination = d.destination;
   // this.book.routeId= this.arr[this.r].id;
   //  this.book.date = this.arr[this.r].dateOfDepature;
    // this.book.busName = this.arr[this.r].buses[this.bus].busName;
@@ -114,4 +117,7 @@ export class Book{
   busName:string;
   date:string;
   duration:string;
+  busId:number;
+  source:string;
+  destination:string;
 }

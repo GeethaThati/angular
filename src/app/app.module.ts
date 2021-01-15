@@ -25,6 +25,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaterialModule } from './angular-material.module';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { PaymentComponent } from './payment/payment.component';
+import { CancelTicketComponent } from './cancel-ticket/cancel-ticket.component';
 
 
 @NgModule({
@@ -47,7 +48,8 @@ import { PaymentComponent } from './payment/payment.component';
     DashboardComponent,
     RegisterComponent,
     AddRouteComponent,
-    PaymentComponent
+    PaymentComponent,
+    CancelTicketComponent
 
   ],
   imports: [
