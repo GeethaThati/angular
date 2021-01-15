@@ -48,6 +48,8 @@ export class ViewBusComponent implements OnInit {
     this.book.date = d.dateOfDepature;
     this.book.duration = d.duration;
     this.book.busId = bus.busId;
+    this.book.source = d.source;
+    this.book.destination = d.destination;
   // this.book.routeId= this.arr[this.r].id;
   //  this.book.date = this.arr[this.r].dateOfDepature;
    // this.book.busName = this.arr[this.r].buses[this.bus].busName;
@@ -116,4 +118,6 @@ export class Book{
   date:string;
   duration:string;
   busId:number;
+  source:string;
+  destination:string;
 }
