@@ -19,6 +19,7 @@ export class PassengersComponent implements OnInit {
   num:number;
   response : any;
   book: Book = new Book();
+  
 
   constructor(private passengerService  : PassengerService, private router : Router) { }
 
@@ -30,13 +31,13 @@ export class PassengersComponent implements OnInit {
     this.booking.routeId= this.book.routeId;
     this.booking.userId = parseInt(sessionStorage.getItem('customerId'));
     this.booking.boarding = this.book.boarding;
-    alert(JSON.stringify(this.book.boarding));
+   // alert(JSON.stringify(this.book.boarding));
     this.booking.droping = this.book.dropping;
     this.booking.amount = this.book.fare;
     this.booking.duration = this.book.duration;
     this.booking.busName=this.book.busName;
     this.booking.date = this.book.date;
-    
+
     //alert(JSON.stringify(this.booking));
    // alert(this.booking.userId);
     
@@ -54,7 +55,10 @@ export class PassengersComponent implements OnInit {
 
   alert(JSON.stringify(this.booking));
   this.passengerService.addPassenger(this.booking).subscribe(response =>{
-    sessionStorage.setItem('ticketId',JSON.stringify(response));
+    this.response = response;
+    //alert(JSON.stringify(response));
+    sessionStorage.setItem('ticketId',String(this.response.ticketId));
+    alert(sessionStorage.getItem('ticketId'));
     this.router.navigate(['payment']);
   })
 

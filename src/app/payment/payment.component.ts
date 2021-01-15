@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Payment } from '../models/Payment';
 import { PaymentService } from '../payment.service';
+import { Book } from '../view-bus/view-bus.component';
 
 @Component({
   selector: 'app-payment',
@@ -10,6 +11,7 @@ import { PaymentService } from '../payment.service';
 export class PaymentComponent implements OnInit {
 
   payment : Payment = new Payment();
+  book: Book = new Book();
   
 
   constructor(private paymentService : PaymentService) { 
@@ -17,7 +19,10 @@ export class PaymentComponent implements OnInit {
   }
 
   ngOnInit() {
-    
+    this.payment.ticketId = parseInt(sessionStorage.getItem('ticketId'));
+   // alert(this.payment.ticketId);
+    this.payment.userId = parseInt(sessionStorage.getItem('customerId'));
+    this.payment.amount = this.book.fare;
   }
 
 payNow(){
