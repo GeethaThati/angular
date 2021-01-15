@@ -39,8 +39,8 @@ export class RegisterComponent{
     
   }
 export class Users{
-  firstname:string;
-  lastname:string;
+  firstName:string;
+  lastName:string;
   email:string;
   password:string;
   contact:number;

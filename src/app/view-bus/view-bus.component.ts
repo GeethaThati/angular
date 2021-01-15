@@ -38,11 +38,8 @@ export class ViewBusComponent implements OnInit {
     //this.book.fare = this.book.noOfSeats*this.arr[0].fare;
     alert(JSON.stringify(this.book));
     sessionStorage.setItem("BoardingDetails",JSON.stringify(this.book));
-<<<<<<< HEAD
     this.router.navigate(['passengers']);
-=======
     
->>>>>>> 2abc5a36d69a0cd87e1b03c265ceab218b245740
   }
 
   constructor(private busService:BusService, private router : Router) { }
