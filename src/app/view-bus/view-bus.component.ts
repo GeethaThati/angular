@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { BusService } from '../bus.service';
+import { Bus } from '../models/bus';
 import { Route } from '../models/Route';
 import { Stop } from '../models/Stop';
 import { StopDetails } from '../models/StopDetails';
@@ -23,29 +25,47 @@ export class ViewBusComponent implements OnInit {
   book:Book = new Book();
   amount:any;
   routeId:any;
+  num:number;
+  r:any;
 
-  toggle(){
+  toggle(bus:Bus,d:string){
     this.isShowDiv= !this.isShowDiv;
+    // alert(JSON.stringify(bus));
+    // //alert(JSON.stringify(route));
+    // alert(d);
   }
 
-  seatsBook(){
+  seatsBook(bus:Bus,d:Route){
+    //alert(JSON.stringify(bus));
+    //alert(d.dateOfDepature);
     this.amount= document.getElementById("fare").innerHTML;
     this.routeId = document.getElementById("routeId").innerHTML;
+   // this.r = document.getElementById("r").innerHTML;
+    // alert(this.r);
     this.book.fare = this.amount;
     this.book.routeId = this.routeId;
+    this.book.busName = bus.busName;
+    this.book.date = d.dateOfDepature;
+    this.book.duration = d.duration;
+  // this.book.routeId= this.arr[this.r].id;
+  //  this.book.date = this.arr[this.r].dateOfDepature;
+   // this.book.busName = this.arr[this.r].buses[this.bus].busName;
    // alert(this.routeId);
     //this.book.fare = this.book.noOfSeats*this.arr[0].fare;
     alert(JSON.stringify(this.book));
     sessionStorage.setItem("BoardingDetails",JSON.stringify(this.book));
-    
+    this.router.navigate(['passengers']);
+
   }
 
-  constructor(private busService:BusService) { }
+  constructor(private busService:BusService, private router : Router) { }
 
   ngOnInit() {
     //alert(sessionStorage.getItem('routeDetails'));
     this.arr=JSON.parse(sessionStorage.getItem('routeDetails'));
     alert(JSON.stringify(this.arr));
+    this.num = this.arr.length;
+    //alert(this.num);
    // alert(this.arr[0].destination);
     for(let val of this.arr){
       //alert(val.source);
@@ -64,6 +84,7 @@ export class ViewBusComponent implements OnInit {
           alert(JSON.stringify(response));
           //alert(this.boarding[0].stop);
           
+          
         }
         
       );
@@ -76,13 +97,10 @@ export class ViewBusComponent implements OnInit {
            //this.dropping.push(response);
            // alert(this.dropping[0].stop);
          // alert(JSON.stringify(this.dropping));
+        
           }
       );
-    }
-   
-
-    
-    
+    } 
   }
 
 }
@@ -93,4 +111,7 @@ export class Book{
   dropping:string;
   fare:number;
   routeId:number;
+  busName:string;
+  date:string;
+  duration:string;
 }

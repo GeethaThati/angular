@@ -19,11 +19,11 @@ import { AdminOptionsComponent } from './admin-options/admin-options.component';
 import { HeaderComponent } from './header/header.component';
 import { SigninComponent } from './signin/signin.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { RegisterComponent } from './register/register.component';
+import { AddRouteComponent } from './add-route/add-route.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaterialModule } from './angular-material.module';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { RegisterComponent } from './register/register.component';
-
 
 
 @NgModule({
@@ -44,7 +44,8 @@ import { RegisterComponent } from './register/register.component';
     HeaderComponent,
     SigninComponent,
     DashboardComponent,
-    RegisterComponent
+    RegisterComponent,
+    AddRouteComponent
 
   ],
   imports: [
@@ -55,7 +56,6 @@ import { RegisterComponent } from './register/register.component';
     HttpClientModule,
     BrowserAnimationsModule,
     AngularMaterialModule
-    
   ],
   providers: [],
   bootstrap: [AppComponent]

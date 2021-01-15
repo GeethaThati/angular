@@ -1,0 +1,13 @@
+<p style = text-align:center>ADD ROUTE</p>
+<form (ngSubmit)="addRoute()">
+    <div class="container">
+    Source  <input type="text" name="source" [(ngModel)]=route.source><br>
+    Destination <input type="text" name="destination" [(ngModel)]=route.destination><br>
+    Fare <input type="number" name="fare"[(ngModel)]=route.fare><br>
+    Duration <input type="text" name="dur"[(ngModel)]=route.duration><br>
+    Date Of Departure <input type="datetime-local" name="doj"[(ngModel)]=route.dateOfDepature><br>
+    Date of Arrival <input type="datetime-local" name="doa"[(ngModel)]=route.dateOfArrival><br>
+    Seats Available <input type="number" name="sa"[(ngModel)]=route.seatAvailable><br>
+    <button type="submit">Save</button>
+    </div>
+</form>
