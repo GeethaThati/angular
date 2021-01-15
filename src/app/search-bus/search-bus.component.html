@@ -9,6 +9,7 @@
 </div> -->
 
 <mat-form-field>
+ <mat-form-field>
   <input type="text" placeholder="From" matInput [formControl]="myControl" [matAutocomplete]="auto" [(ngModel)]=search.source name="source">
   <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
     <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
@@ -27,9 +28,7 @@
 </mat-form-field>
 
 <mat-form-field >
-  <input  type="date" name="date" [(ngModel)]=search.date> 
+  <input  type="date" name="date" [(ngModel)]=search.date [formControl]="myControl"> 
 </mat-form-field>
 
 <button id="btn" type="submit" (click)="searchBus()">Search</button>
-
-
