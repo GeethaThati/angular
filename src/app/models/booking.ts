@@ -1,8 +1,18 @@
 import { Passenger } from "./passenger";
 
 export class Booking{
-    passenger:Passenger =new Passenger();
     routeId : number;
     userId :number;
-    passengers : Passenger[];
+    boarding : string;
+    droping : string;
+    amount : number;
+    busName: string;
+    duration: string;
+    date: string;
+    passengers : Array <Passenger> = new Array<Passenger>();
+    constructor(seats : number){
+        for(let x=0; x < seats; x++){
+            this.passengers.push(new Passenger());
+        }
+    }
 }

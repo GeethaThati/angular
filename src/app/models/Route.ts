@@ -10,4 +10,5 @@ export class Route{
   dateOfArrival:string;
   seatAvailable:number;
   buses: Bus[];
+  
 }

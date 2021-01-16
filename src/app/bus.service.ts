@@ -23,4 +23,9 @@ export class BusService {
     let url="http://localhost:8005/project/api/stops?city="+city+"&id="+routeId;
     return this.http.get<StopDetails>(url);
   }
+
+  cancelTicket(ticketId:number):Observable<any>{
+    let url="http://localhost:8080/project/api/cancel?ticketId="+ticketId;
+    return this.http.get<any>(url);
+  }
 }

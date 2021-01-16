@@ -40,7 +40,6 @@ export class RegisterComponent{
     
   }
 export class Users{
-  userId:number;
   firstName:string;
   lastName:string;
   email:string;

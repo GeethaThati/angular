@@ -1,10 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { ViewSeatsComponent } from './view-seats/view-seats.component';
 import { PassengersComponent } from './passengers/passengers.component';
@@ -21,14 +19,19 @@ import { AdminOptionsComponent } from './admin-options/admin-options.component';
 import { HeaderComponent } from './header/header.component';
 import { SigninComponent } from './signin/signin.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { ProfileComponent } from './profile/profile.component';
+import { RegisterComponent } from './register/register.component';
+import { AddRouteComponent } from './add-route/add-route.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AngularMaterialModule } from './angular-material.module';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { PaymentComponent } from './payment/payment.component';
+import { CancelTicketComponent } from './cancel-ticket/cancel-ticket.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    RegisterComponent,
     LoginComponent,
     ViewSeatsComponent,
     PassengersComponent,
@@ -43,7 +46,10 @@ import { ProfileComponent } from './profile/profile.component';
     HeaderComponent,
     SigninComponent,
     DashboardComponent,
-    ProfileComponent
+    RegisterComponent,
+    AddRouteComponent,
+    PaymentComponent,
+    CancelTicketComponent
 
   ],
   imports: [
@@ -51,7 +57,9 @@ import { ProfileComponent } from './profile/profile.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    AngularMaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
