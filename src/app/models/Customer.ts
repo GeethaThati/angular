@@ -4,5 +4,4 @@ export class Customer {
     dateOfBirth: Date;
     email: string;
     password: string;
-    profilePic: string;
   }

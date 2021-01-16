@@ -21,6 +21,7 @@ import { AdminOptionsComponent } from './admin-options/admin-options.component';
 import { HeaderComponent } from './header/header.component';
 import { SigninComponent } from './signin/signin.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     AdminOptionsComponent,
     HeaderComponent,
     SigninComponent,
-    DashboardComponent
+    DashboardComponent,
+    ProfileComponent
 
   ],
   imports: [
