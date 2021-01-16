@@ -7,7 +7,7 @@
   </form>
 
 </div> -->
-
+<div>
  <mat-form-field>
   <input type="text" placeholder="From" matInput [formControl]="myControl" [matAutocomplete]="auto" [(ngModel)]=search.source name="source">
   <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
@@ -32,3 +32,4 @@
 
 <button id="btn" type="submit" (click)="searchBus()">Search</button>
  
+</div>

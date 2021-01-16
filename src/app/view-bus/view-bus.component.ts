@@ -17,7 +17,7 @@ export class ViewBusComponent implements OnInit {
   seats: number=1;
   trip:tripDetails = new tripDetails();
   arr:Route[] =[];
-  isShowDiv = true;
+  isShowDiv = false;
   isRoute = true;
   boarding:Stop[] =[];
   var:Stop[]=[];
@@ -27,9 +27,22 @@ export class ViewBusComponent implements OnInit {
   routeId:any;
   num:number;
   r:any;
+  view:any = "View Seats";
+  hide:any[]=[];
+  elementsShowing = new Set<Bus>();
 
-  toggle(bus:Bus,d:string){
-    this.isShowDiv= !this.isShowDiv;
+  toggle(bus:Bus){
+    if(this.elementsShowing.has(bus)){
+      this.elementsShowing.delete(bus);
+      this.view = "View Seats";
+    }
+    else{
+      this.elementsShowing.add(bus);
+      
+      this.view = "Hide Seats";
+    }
+    //this.isShowDiv= !this.isShowDiv;
+    
     // alert(JSON.stringify(bus));
     // //alert(JSON.stringify(route));
     // alert(d);
