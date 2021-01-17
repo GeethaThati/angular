@@ -28,6 +28,9 @@ import { PaymentComponent } from './payment/payment.component';
 import { CancelTicketComponent } from './cancel-ticket/cancel-ticket.component';
 import { StopsComponent } from './stops/stops.component';
 import { FooterComponent } from './footer/footer.component';
+import { UpdateProfileComponent } from './update-profile/update-profile.component';
+import { ProfileComponent } from './profile/profile.component';
+import { MyTripsComponent } from './my-trips/my-trips.component';
 
 
 @NgModule({
@@ -53,8 +56,10 @@ import { FooterComponent } from './footer/footer.component';
     PaymentComponent,
     CancelTicketComponent,
     StopsComponent,
-    FooterComponent
-
+    FooterComponent,
+    UpdateProfileComponent,
+    ProfileComponent,
+    MyTripsComponent
   ],
   imports: [
     BrowserModule,

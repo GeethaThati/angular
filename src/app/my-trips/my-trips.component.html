@@ -1,0 +1,25 @@
+<div class="container">
+  <h3 style="text-align:center;color:dodgerblue;">My Trips</h3>
+<div class="details">
+  <table>
+    <div >
+      <tr class="head">
+        <th>Ticket Id</th>
+        <th>From</th>
+        <th>To</th>
+        <th>Fare</th>
+        <th>Date</th>
+        <th>Status</th>
+      </tr>
+        <tr *ngFor="let book of trip">
+          <td>{{book.ticketId}}</td>
+          <td>{{book.boarding}}</td>
+          <td>{{book.droping}}</td>
+          <td>{{book.amount}}</td>
+          <td>{{book.paidDate}}</td>
+          <td>{{book.status}}</td>
+        </tr>
+    </div>
+  </table>
+</div>
+</div>

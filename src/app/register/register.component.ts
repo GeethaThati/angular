@@ -33,9 +33,10 @@ export class RegisterComponent{
       email:new FormControl('',[Validators.required,Validators.email]),
       password:new FormControl('',[Validators.required,Validators.minLength(8)])
     })
-    get firstname(){return this.registerForm.get('firstname')}
-    get lastname(){return this.registerForm.get('lastname')}
+    get firstname(){return this.registerForm.get('firstName')}
+    get lastname(){return this.registerForm.get('lastName')}
     get email(){return this.registerForm.get('email')}
+    get password(){return this.registerForm.get('password')}
     
   }
 export class Users{
@@ -44,8 +45,9 @@ export class Users{
   email:string;
   password:string;
   contact:number;
-  gender:string;
+  gender:boolean;
   dob:Date;
+  wallet:number;
   
 }
 

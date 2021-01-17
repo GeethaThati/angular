@@ -1,14 +1,16 @@
+
 <img [src]="img1" width="100%" height="70%">
 
 <div class="search">
+<!-- <div>
   <form (ngSubmit) = "searchBus()" class="form-inline">
     <input  type="text" name="source" placeholder="From" [(ngModel)]=search.source>
     <input  type="text" name="destination" placeholder="To" [(ngModel)]=search.destination>
     <input  type="date" name="date" [(ngModel)]=search.date>
     <button class="but" type="submit">Search</button>
   </form>
+</div>  -->
 
-</div>
 
 <div class="offers">
 
@@ -51,7 +53,6 @@
   </div>
 
 
-<!-- <mat-form-field>
  <mat-form-field>
   <input type="text" placeholder="From" matInput [formControl]="myControl" [matAutocomplete]="auto" [(ngModel)]=search.source name="source">
   <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
@@ -74,5 +75,7 @@
   <input  type="date" name="date" [(ngModel)]=search.date [formControl]="myControl"> 
 </mat-form-field>
 
-<button id="btn" type="submit" (click)="searchBus()">Search</button> -->
+<button id="btn" type="submit" (click)="searchBus()">Search</button> 
+
+
 
