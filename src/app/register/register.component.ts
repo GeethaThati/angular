@@ -35,17 +35,15 @@ export class RegisterComponent{
     }
     
   }
-
-
-  export class Users{
-    firstName:string;
-    lastName:string;
-    email:string;
-    password:string;
-    contact:number;
-    gender:string;
-    dob:Date;
-    wallet:number;
-    
-  }
+export class Users{
+  firstName:string;
+  lastName:string;
+  email:string;
+  password:string;
+  contact:number;
+  gender:string;
+  dob:Date;
+  wallet:number;
+  
+}
 

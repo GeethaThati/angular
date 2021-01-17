@@ -1,7 +1,7 @@
 
 <div class="details">
-  <table>
-    <div *ngFor = "let t of arr;let x = index;">
+  <div>
+    <table class="tbl">
       <tr class="head">
         <td>Bus Id</td>
         <td>Bus Name</td>
@@ -11,6 +11,11 @@
         <td>Fare</td>
         <td>Seats Available</td>
       </tr>
+    </table>
+  </div>
+  <table>
+    <div *ngFor="let t of arr;">
+     
       
     <tr *ngFor="let bus of t.buses;">
       <td><p><b>{{bus.busId}}</b></p></td>

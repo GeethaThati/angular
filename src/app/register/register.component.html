@@ -1,9 +1,17 @@
+
     <div class="container">
     <form (ngSubmit)="register()">
     
+<!-- <fieldset>
+    <legend>Get Registered!</legend>
+    <form [formGroup]="registerForm" (ngSubmit)="register()">
+    <table>
+        <tr>
+            <td>
+
             <label for="firstName">First Name</label>
             <input type="text" name="firstName" [(ngModel)]=user.firstName><br>
-            <!-- <span class="error" *ngIf="firstname.invalid && firstname.touched">First Name is Required</span> -->
+           <span class="error" *ngIf="firstname.invalid && firstname.touched">First Name is Required</span> -->
     
             <label for="lastName">Last Name</label>
     
@@ -43,3 +51,34 @@
             </div>
 </form>
 </div>
+<!-- </fieldset>
+<div class="main">
+    <div class="card">
+<form (ngSubmit)="register()" [formGroup]="registerForm">
+    <div class="container">
+    <label>First Name</label>
+    <input type="text" class="form-control" formControlName="firstname" [(ngModel)]=user.firstName name="firstName">
+    <span class="error" *ngIf="firstname.invalid && firstname.touched">First Name is Required</span>
+    <br>
+    <label>Last Name</label>
+    <input type="text" id="lastname" formControlName="lastname" [(ngModel)]=user.lastName name="lastName">
+    <span class="error" *ngIf="lastname.invalid && firstname.touched">Last Name is Required</span>
+    <br>
+    <label>Email</label>
+    <input type="email" id="email" formControlName="email" [(ngModel)]=user.email name="email">
+    <span class="error" *ngIf="email.invalid && email.touched">Email is Required</span><br>
+    <label>Password</label>
+    <input type="password" id="password" formControlName="password" [(ngModel)]=user.password maxlength="8" name="password"><br>
+    <label>Contact</label>
+    <input type="tel" id="contact" formControlName="contact" [(ngModel)]=user.contact name="contact"><br>
+    <label for="gender">Male</label>
+    <input type="radio" id="male" formControlName="gender" value="male" [(ngModel)]=user.gender name="gender">
+    <label>Female</label>
+    <input type="radio" id="female" formControlName="gender" value="female" [(ngModel)]=user.gender name="gender"><br>
+    <label>Date Of Birth</label>
+    <input type="date" id="dob" formControlName="dob" [(ngModel)]=user.dob name="dob"><br>
+    <button value="submit">Register</button>
+</div>
+</form>
+</div>
+</div> -->

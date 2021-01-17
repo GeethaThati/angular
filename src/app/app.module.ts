@@ -31,6 +31,7 @@ import { FooterComponent } from './footer/footer.component';
 import { UpdateProfileComponent } from './update-profile/update-profile.component';
 import { ProfileComponent } from './profile/profile.component';
 import { MyTripsComponent } from './my-trips/my-trips.component';
+import { ChangePasswordComponent } from './change-password/change-password.component';
 
 
 @NgModule({
@@ -59,7 +60,8 @@ import { MyTripsComponent } from './my-trips/my-trips.component';
     FooterComponent,
     UpdateProfileComponent,
     ProfileComponent,
-    MyTripsComponent
+    MyTripsComponent,
+    ChangePasswordComponent
   ],
   imports: [
     BrowserModule,
