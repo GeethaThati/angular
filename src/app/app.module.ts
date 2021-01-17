@@ -29,6 +29,7 @@ import { CancelTicketComponent } from './cancel-ticket/cancel-ticket.component';
 import { UpdateProfileComponent } from './update-profile/update-profile.component';
 import { ProfileComponent } from './profile/profile.component';
 import { MyTripsComponent } from './my-trips/my-trips.component';
+import { ChangePasswordComponent } from './change-password/change-password.component';
 
 
 @NgModule({
@@ -55,7 +56,8 @@ import { MyTripsComponent } from './my-trips/my-trips.component';
     CancelTicketComponent,
     UpdateProfileComponent,
     ProfileComponent,
-    MyTripsComponent
+    MyTripsComponent,
+    ChangePasswordComponent
 
   ],
   imports: [

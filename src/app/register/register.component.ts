@@ -15,6 +15,7 @@ export class RegisterComponent{
   message:string;
   constructor(private registerService:RegisterService,private router:Router) { }
   register(){
+    alert(JSON.stringify(this.user));
     this.registerService.register(this.user).subscribe(response=>{
       alert(JSON.stringify(response))
       alert(response.status)
@@ -45,7 +46,7 @@ export class Users{
   email:string;
   password:string;
   contact:number;
-  gender:boolean;
+  gender:string;
   dob:Date;
   wallet:number;
   
