@@ -24,7 +24,11 @@ import { AddRouteComponent } from './add-route/add-route.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaterialModule } from './angular-material.module';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { PaymentComponent } from './payment/payment.component';
 import { CancelTicketComponent } from './cancel-ticket/cancel-ticket.component';
+import { UpdateProfileComponent } from './update-profile/update-profile.component';
+import { ProfileComponent } from './profile/profile.component';
+import { MyTripsComponent } from './my-trips/my-trips.component';
 
 
 @NgModule({
@@ -47,7 +51,11 @@ import { CancelTicketComponent } from './cancel-ticket/cancel-ticket.component';
     DashboardComponent,
     RegisterComponent,
     AddRouteComponent,
-    CancelTicketComponent
+    PaymentComponent,
+    CancelTicketComponent,
+    UpdateProfileComponent,
+    ProfileComponent,
+    MyTripsComponent
 
   ],
   imports: [

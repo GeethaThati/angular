@@ -1,13 +1,9 @@
+li{
+    list-style: none;
+}
 * {
     box-sizing: border-box;
     font-family: 'Muli', 'Baloo Da 2', 'Montserrat', sans-serif;
-  }
-  
-  
-  
-  .main {   
-    width: 100%;
-    margin: auto;
   }
   
   /* Add a card effect for articles */
@@ -40,10 +36,10 @@
   }
   
   /* Full-width inputs */
-  input[type=text], input[type=password], input[type=email], input[type=number] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
+  input[type=text], input[type=password], input[type=email], input[type=date],input[type=number],input[type=select] {
+    width: 30%;
+    padding: 10px 10px;
+    margin: 8px 8px;
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
@@ -54,10 +50,9 @@
     background-color: blue;
     color: white;
     padding: 14px 20px;
-    margin: 8px 0;
     border: none;
     cursor: pointer;
-    width: 100%;
+    width: 30%;
   }
   
   /* Add a hover effect for buttons */
@@ -76,7 +71,7 @@
   .container {
     padding: 16px;
     width: 350px;
-    margin: auto;
+    clear: both;
   }
   
   /* The "Forgot password" text */
@@ -85,8 +80,21 @@
     padding-top: 16px;
   }
   
-  img {
-    width: auto;
-    max-width: 185px;
-    height: auto;
+  .passenger{
+    background-color: rgb(242, 246, 247);
+    width: 200%;
+    height: 40;
+    border-radius: 35px;
+    padding-left: 20px;
+  }
+
+  .data{
+    background-color:rgb(242, 246, 247);
+    width: 20%;
+    height: 70%;
+    position: absolute;
+    left: 80%;
+    top: 30%;
+    border-radius: 40px;
+    padding: 10px;
   }

@@ -1,0 +1,21 @@
+<div>
+<form (ngSubmit)="payNow()">
+
+    Payment Type: <select id="types">
+        <option>Payment Type</option>
+        <option>Debit Car</option>
+        <option>Credit Card</option>
+        <option>UPI</option>
+    </select><br>
+    <!-- userId: <input type = "number" name="uId" [(ngModel)]=payment.userId><br>
+    TicketId : <input type ="number" name= "tId" [(ngModel)]=payment.ticketId><br> -->
+
+    CarNumber  : <input type="number" name="card" [(ngModel)]=payment.cardNumber><br>
+    Name  <input type="text" name="name" [(ngModel)]=payment.nameOnCard><br>
+    Expiry Date : <input type="date" name="Expiry" [(ngModel)]=payment.expiryDate><br>
+    Cvv : <input type="number" name="cvv" [(ngModel)]=payment.cvv><br>
+   
+
+    <button>Confirm</button>
+</form>
+</div>

@@ -11,7 +11,7 @@ export class PassengerService {
 
   constructor(private http:HttpClient) { }
 
-  addPassenger(booking: Booking):Observable<any>{
+  addPassenger(booking: Booking){
     let url="http://localhost:8080/project/api/passenger";
     return this.http.post(url,booking);
   }

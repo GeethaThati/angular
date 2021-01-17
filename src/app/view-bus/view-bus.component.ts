@@ -71,7 +71,7 @@ export class ViewBusComponent implements OnInit {
     alert(JSON.stringify(this.book));
     sessionStorage.setItem("BoardingDetails",JSON.stringify(this.book));
     this.router.navigate(['passengers']);
-
+    
   }
 
   constructor(private busService:BusService, private router : Router) { }

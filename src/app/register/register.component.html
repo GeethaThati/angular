@@ -4,20 +4,20 @@
     <table>
         <tr>
             <td>
-            <label for="firstname">First Name</label>
+            <label for="firstName">First Name</label>
             </td> 
             <td>
-            <input type="text" class="form-control" formControlName="firstname" [(ngModel)]="user.firstname">
+            <input type="text" class="form-control" formControlName="firstname" [(ngModel)]="user.firstName">
             <span class="error" *ngIf="firstname.invalid && firstname.touched">First Name is Required</span>
             </td>  
         </tr>
         <br>
         <tr>
             <td>
-            <label for="lastname">Last Name</label>
+            <label for="lastName">Last Name</label>
             </td> 
             <td>
-            <input type="text" id="lastname" formControlName="lastname" [(ngModel)]="user.lastname">
+            <input type="text" id="lastname" formControlName="lastname" [(ngModel)]="user.lastName">
             <span class="error" *ngIf="lastname.invalid && firstname.touched">Last Name is Required</span>
             </td>  
         </tr>

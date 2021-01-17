@@ -6,6 +6,7 @@ import { tripDetails } from './models/tripDetails';
 import { StopDetails } from './models/StopDetails';
 import { Route } from './models/Route';
 import { Stop } from './models/Stop';
+import { Trip } from './models/Trip';
 
 @Injectable({
   providedIn: 'root'
@@ -28,4 +29,10 @@ export class BusService {
     let url="http://localhost:8081/project/api/cancel?ticketId="+ticketId;
     return this.http.get<any>(url);
   }
+
+  fetchTrips(userId:number):Observable<Trip[]>{
+    let url = "http://localhost:8081/project/api/myTrips?userId="+userId;
+    return this.http.get<Trip[]>(url);
+  }
+
 }

@@ -16,6 +16,8 @@ import { UpdateBusRouteComponent } from './update-bus-route/update-bus-route.com
 import { ViewBusComponent } from './view-bus/view-bus.component';
 import { ViewSeatsComponent } from './view-seats/view-seats.component';
 import { AddRouteComponent } from './add-route/add-route.component';
+import { PaymentComponent } from './payment/payment.component';
+import { CancelTicketComponent } from './cancel-ticket/cancel-ticket.component';
 
 
 const routes: Routes = [
@@ -27,8 +29,8 @@ const routes: Routes = [
   { path: 'passengers', component:PassengersComponent},
   { path: 'view-bus',component:ViewBusComponent},
   { path: 'admin-options', component:AdminOptionsComponent},
-  { path: 'add-bus',component:AddBusComponent},
-  { path: 'update-bus-route', component:UpdateBusRouteComponent},
+  { path: 'admin-options/add-bus',component:AddBusComponent},
+  { path: 'admin-options/update-bus-route', component:UpdateBusRouteComponent},
   { path: 'passengers', component:PassengersComponent},
   { path: 'search-bus', component:SearchBusComponent},
   { path: 'header', component:HeaderComponent},
@@ -37,7 +39,9 @@ const routes: Routes = [
   { path: 'login', component:LoginComponent},
   { path: 'dashboard',component:DashboardComponent},
   { path: 'register',component:RegisterComponent},
-  { path: 'add-route',component:AddRouteComponent}
+  { path: 'admin-options/add-route',component:AddRouteComponent},
+  { path: 'payment', component:PaymentComponent},
+  { path: 'cancel-ticket', component:CancelTicketComponent}
 
 ];
 
