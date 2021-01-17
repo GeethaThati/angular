@@ -18,6 +18,8 @@ import { ViewSeatsComponent } from './view-seats/view-seats.component';
 import { AddRouteComponent } from './add-route/add-route.component';
 import { PaymentComponent } from './payment/payment.component';
 import { CancelTicketComponent } from './cancel-ticket/cancel-ticket.component';
+import { StopsComponent } from './stops/stops.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 const routes: Routes = [
@@ -41,7 +43,9 @@ const routes: Routes = [
   { path: 'register',component:RegisterComponent},
   { path: 'admin-options/add-route',component:AddRouteComponent},
   { path: 'payment', component:PaymentComponent},
-  { path: 'cancel-ticket', component:CancelTicketComponent}
+  { path: 'cancel-ticket', component:CancelTicketComponent},
+  { path: 'admin-options/stops', component:StopsComponent},
+  { path: 'footer', component:FooterComponent}
 
 ];
 

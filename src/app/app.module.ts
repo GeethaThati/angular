@@ -26,6 +26,8 @@ import { AngularMaterialModule } from './angular-material.module';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { PaymentComponent } from './payment/payment.component';
 import { CancelTicketComponent } from './cancel-ticket/cancel-ticket.component';
+import { StopsComponent } from './stops/stops.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -49,7 +51,9 @@ import { CancelTicketComponent } from './cancel-ticket/cancel-ticket.component';
     RegisterComponent,
     AddRouteComponent,
     PaymentComponent,
-    CancelTicketComponent
+    CancelTicketComponent,
+    StopsComponent,
+    FooterComponent
 
   ],
   imports: [

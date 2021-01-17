@@ -18,16 +18,19 @@ export class PaymentComponent implements OnInit {
    
   }
 
+  
   ngOnInit() {
     this.payment.ticketId = parseInt(sessionStorage.getItem('ticketId'));
    // alert(this.payment.ticketId);
     this.payment.userId = parseInt(sessionStorage.getItem('customerId'));
-    this.payment.amount = this.book.fare;
+    // this.book = JSON.parse(sessionStorage.getItem('BoardinDetails'));
+    this.payment.amount = parseInt(sessionStorage.getItem('amount'));
+    alert(this.payment.amount);
   }
 
 payNow(){
 
- alert(JSON.stringify(this.payment));
+  alert(JSON.stringify(this.payment));
 
   this.paymentService.payNow(this.payment).subscribe(response =>{
   alert(JSON.stringify(response));

@@ -59,6 +59,7 @@ export class PassengersComponent implements OnInit {
     //alert(JSON.stringify(response));
     sessionStorage.setItem('ticketId',String(this.response.ticketId));
     alert(sessionStorage.getItem('ticketId'));
+    sessionStorage.setItem('amount',String(this.book.fare));
     this.router.navigate(['payment']);
   })
 

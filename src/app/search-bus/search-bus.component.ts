@@ -21,6 +21,18 @@ export class SearchBusComponent implements OnInit {
   search:Search = new Search();
   trip:tripDetails = new tripDetails();
   details:tripDetails[] = [];
+
+  img1 : any ="../assets/images/cover.jpg";
+  offer1 : any ="../assets/images/offer1.png";
+  offer2: any = "../assets/images/offer3.jpg";
+  offer3: any = "../assets/images/offer4.jpg";
+  offer4: any = "../assets/images/offer5.png";
+  route : any ="../assets/images/route.png";
+  bus:any = "../assets/images/bus.png";
+  happy: any = "../assets/images/happy.png";
+  refund: any = "../assets/images/refund.jpg";
+  help: any ="../assets/images/customer.jpg";
+  
   constructor(private busService:BusService,private router:Router) { }
 
   ngOnInit() {

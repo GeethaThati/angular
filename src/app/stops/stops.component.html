@@ -1,0 +1,12 @@
+<div class="container">
+    <form (ngSubmit)="addStop()">
+        Route Id: <input type="number" name="routeId" [(ngModel)]=addstop.routeId><br>
+        <ul *ngFor ="let s of stopsCount; let i=index">
+       <li>Stop Name: <input type="text" name="stop" [(ngModel)]=addstop.stops[i].stop><br></li>
+        <li>City : <input type="text" name="city" [(ngModel)]=addstop.stops[i].city><br> </li>
+       <li>time :<input type="datetime" name="time" placeholder="YYYY-MM-DD hh:mm" [(ngModel)]=addstop.stops[i].date><br></li>
+      </ul>
+       <button>Add</button>
+
+    </form>
+</div>

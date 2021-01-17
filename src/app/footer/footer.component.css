@@ -1,0 +1,33 @@
+.footer{
+border: 1px solid black;
+width: 95%;
+height:40%;
+position: absolute;
+top:280%;
+background-color: black;
+/* left: 50%; */
+padding: 30px;
+}
+
+.para{
+    border: 1px solid black;
+    width: 20%;
+    height: 80%;
+  }
+  .social{
+      border: 1px solid black;
+      width: 20%;
+      height: 40%;
+      position: absolute;
+      left: 70%;
+      top:10%;
+  }
+p{
+    text-decoration: none;
+    text-align: left;
+    color: gray;
+}
+h5{
+    text-align: center;
+    color: gray;
+}

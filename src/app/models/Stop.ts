@@ -4,5 +4,5 @@ export class Stop{
   city:string;
   stop:string;
   time:string;
-  
+  date:Date;
 }

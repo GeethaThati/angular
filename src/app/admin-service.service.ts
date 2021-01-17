@@ -5,6 +5,7 @@ import { UpdateBus } from './models/UpdateBus';
 import { DeleteBus } from './models/deleteBus';
 import { AdminLogin } from './models/Adminlogin';
 import { Route } from './models/Route';
+import { AddStop } from './models/AddStop';
 
 @Injectable({
   providedIn: 'root'
@@ -35,5 +36,10 @@ export class AdminServiceService {
   addRoute(route: Route){
     let url = "http://localhost:8080/project/api/addroute";
    return this.http.post(url, route); 
+  }
+
+  addStop(Stop: AddStop){
+    let url = "http://localhost:8080/project/api/addstop";
+    return this.http.post(url,stop);
   }
 }
