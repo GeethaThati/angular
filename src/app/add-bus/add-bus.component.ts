@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AdminServiceService } from '../admin-service.service';
 import { Bus } from '../models/bus';
 
@@ -11,15 +12,19 @@ export class AddBusComponent implements OnInit {
 
   bus : Bus = new Bus();
   response :any;
-  constructor(private adminService : AdminServiceService) { }
+  constructor(private adminService : AdminServiceService, private router: Router) { }
 
   ngOnInit() {
   }
 
   addBus(){
-    alert(JSON.stringify(this.bus));
+    //alert(JSON.stringify(this.bus));
+    alert("Bus Added Successfully !!")
     this.adminService.addBusDetails(this.bus).subscribe(response =>{
-      console.log(response);
+      
     })
+  }
+  goBack(){
+    this.router.navigate(['admin-options']);
   }
 }

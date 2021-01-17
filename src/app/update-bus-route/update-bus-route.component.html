@@ -1,8 +1,18 @@
-<p style = text-align:center>UPDATE BUS ROUTE</p>
-<form (ngSubmit)="updateRoute()">
+<h2 style = text-align:center>UPDATE BUS ROUTE</h2>
+    <form (ngSubmit)="updateRoute()">
 <div class="container">
     Bus Number : <input type="text" name="t1" [(ngModel)]=updateBus.busId><br>
     Route Id :<input type="text" name="t2" [(ngModel)]=updateBus.routeId><br>
-    <button type="submit">Update</button>
+    
+    <div class="butt">
+        <div class="btn">
+        <button class="cancelbtn" (click) = "goBack()">Go Back</button>
+        </div>
+        <br><br>
+        <div class="btn2">
+        <button class="subbutton">Save</button>
+        </div>
+    </div>
+
 </div>
 </form>

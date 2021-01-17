@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Payment } from '../models/Payment';
 import { PaymentService } from '../payment.service';
 import { Book } from '../view-bus/view-bus.component';
@@ -14,7 +15,7 @@ export class PaymentComponent implements OnInit {
   book: Book = new Book();
   
 
-  constructor(private paymentService : PaymentService) { 
+  constructor(private paymentService : PaymentService, private router : Router) { 
    
   }
 
@@ -25,7 +26,8 @@ export class PaymentComponent implements OnInit {
     this.payment.userId = parseInt(sessionStorage.getItem('customerId'));
     // this.book = JSON.parse(sessionStorage.getItem('BoardinDetails'));
     this.payment.amount = parseInt(sessionStorage.getItem('amount'));
-    alert(this.payment.amount);
+   // this.payment.paymentType = event.target.value;
+    //alert(this.payment.amount);
   }
 
 payNow(){
@@ -36,6 +38,10 @@ payNow(){
   alert(JSON.stringify(response));
 })
 
+  }
+
+  goBack(){
+    this.router.navigate(['passengers']);
   }
 
 }

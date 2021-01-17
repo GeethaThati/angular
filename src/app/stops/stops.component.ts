@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AdminServiceService } from '../admin-service.service';
 import { AddStop } from '../models/AddStop';
 import { Stop } from '../models/Stop';
@@ -13,7 +14,7 @@ export class StopsComponent implements OnInit {
   addstop : AddStop = new AddStop(1);
   stops: Stop = new Stop();
   stopsCount : number [] = [1];
-  constructor(private adminService:AdminServiceService) { }
+  constructor(private adminService:AdminServiceService, private router : Router) { }
 
   ngOnInit() {
 
@@ -26,6 +27,10 @@ export class StopsComponent implements OnInit {
       alert(JSON.stringify(response));
 
     })
+  }
+
+  goBack(){
+    this.router.navigate(['admin-options']);
   }
 
 }

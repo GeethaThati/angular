@@ -6,7 +6,16 @@
         <li>City : <input type="text" name="city" [(ngModel)]=addstop.stops[i].city><br> </li>
        <li>time :<input type="datetime" name="time" placeholder="YYYY-MM-DD hh:mm" [(ngModel)]=addstop.stops[i].date><br></li>
       </ul>
-       <button>Add</button>
+      
+      <div class="butt">
+        <div class="btn">
+        <button class="cancelbtn" (click) = "goBack()">Go Back</button>
+        </div>
+        <br><br>
+        <div class="btn2">
+        <button class="subbutton">Save</button>
+        </div>
+    </div>
 
     </form>
 </div>

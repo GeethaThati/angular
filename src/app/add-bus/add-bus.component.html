@@ -1,9 +1,25 @@
-<p style = text-align:center>ADD BUS</p>
+<h2 style = text-align:center>ADD BUS</h2>
 <form (ngSubmit)="addBus()">
     <div class="container">
     Bus Name  <input type="text" name="t1" [(ngModel)]=bus.busName><br>
-    Bus Type<input type="text" name="Ac" value="true" [(ngModel)]=bus.busType><br>
+    Bus Type<br>
+     <select [(ngModel)]=bus.busType name="busType">
+        <option>Ac</option>
+        <option>Non-Ac</option>
+        <option>Ordinary</option>
+    </select>
+    <br>
+    <!-- Bus Type <input type="text" name="Ac" value="true" [(ngModel)]=bus.busType><br> -->
     No of Seats <input type="number" name="t3"[(ngModel)]=bus.noOfseats><br>
-    <button type="submit">Save</button>
+    <br>
+    <div class="butt">
+        <div class="btn">
+        <button class="cancelbtn" (click) = "goBack()">Go Back</button>
+        </div>
+        <br><br>
+        <div class="btn2">
+        <button class="subbutton">Save</button>
+        </div>
+    </div>
     </div>
 </form>

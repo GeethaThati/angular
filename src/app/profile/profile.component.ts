@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ProfileService } from '../profile.service';
 import { Router } from '@angular/router';
-import { Users } from '../register/register.component';
 import { Customer } from '../models/Customer';
 import { RegisterService } from '../register.service';
+import { User } from '../models/User';
 
 
 @Component({
@@ -14,7 +14,7 @@ import { RegisterService } from '../register.service';
 export class ProfileComponent{
 
   userId:number;
-  user:Users=new Users();
+  user:User = new User();
   customer:Customer=new Customer();
   message:string;
 

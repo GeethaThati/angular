@@ -1,13 +1,22 @@
-<p style = text-align:center>ADD ROUTE</p>
+<h2 style = text-align:center>ADD ROUTE</h2>
 <form (ngSubmit)="addRoute()">
     <div class="container">
     Source  <input type="text" name="source" placeholder="Enter Source Name" [(ngModel)]=route.source><br>
     Destination <input type="text" name="destination" placeholder="Enter Source Name" [(ngModel)]=route.destination><br>
     Fare <input type="number" name="fare" placeholder="Enter Amount" [(ngModel)]=route.fare><br>
     Duration <input type="text" name="dur" placeholder="Enter Duration in hours" [(ngModel)]=route.duration><br>
-    Date Of Departure <input type="datetime-local" name="doj" placeholder="YYYY-MM-DD hh:mm" [(ngModel)]=route.dateOfDepature><br>
+    Date Of Departure  <input type="datetime-local" name="doj" placeholder="YYYY-MM-DD hh:mm" [(ngModel)]=route.dateOfDepature><br>
     Date of Arrival <input type="datetime-local" name="doa" placeholder="YYYY-MM-DD hh:mm" [(ngModel)]=route.dateOfArrival><br>
     Seats Available <input type="number" name="sa" placeholder="Enter No.of Seats Available" [(ngModel)]=route.seatAvailable><br>
-    <button type="submit">Save</button>
+    
+    <div class="butt">
+        <div class="btn">
+        <button class="cancelbtn" (click) = "goBack()">Go Back</button>
+        </div>
+        <br><br>
+        <div class="btn2">
+        <button class="subbutton">Save</button>
+        </div>
+    </div>
     </div>
 </form>

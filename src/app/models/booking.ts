@@ -9,6 +9,9 @@ export class Booking{
     busName: string;
     duration: string;
     date: string;
+    busId :number;
+    source: string;
+    destination : string;
     passengers : Array <Passenger> = new Array<Passenger>();
     constructor(seats : number){
         for(let x=0; x < seats; x++){

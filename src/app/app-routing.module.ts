@@ -20,6 +20,9 @@ import { PaymentComponent } from './payment/payment.component';
 import { CancelTicketComponent } from './cancel-ticket/cancel-ticket.component';
 import { StopsComponent } from './stops/stops.component';
 import { FooterComponent } from './footer/footer.component';
+import { ProfileComponent } from './profile/profile.component';
+import { UpdateProfileComponent } from './update-profile/update-profile.component';
+import { MyTripsComponent } from './my-trips/my-trips.component';
 
 
 const routes: Routes = [
@@ -45,7 +48,10 @@ const routes: Routes = [
   { path: 'payment', component:PaymentComponent},
   { path: 'cancel-ticket', component:CancelTicketComponent},
   { path: 'admin-options/stops', component:StopsComponent},
-  { path: 'footer', component:FooterComponent}
+  { path: 'footer', component:FooterComponent},
+  { path: 'dashboard/profile', component:ProfileComponent},
+  { path: 'dashboard/update-profile', component:UpdateProfileComponent},
+  { path: 'dashboard/my-trips', component:MyTripsComponent}
 
 ];
 

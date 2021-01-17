@@ -1,16 +1,39 @@
-
 <img [src]="img1" width="100%" height="70%">
-
 <div class="search">
-<!-- <div>
+<div>
   <form (ngSubmit) = "searchBus()" class="form-inline">
     <input  type="text" name="source" placeholder="From" [(ngModel)]=search.source>
     <input  type="text" name="destination" placeholder="To" [(ngModel)]=search.destination>
     <input  type="date" name="date" [(ngModel)]=search.date>
     <button class="but" type="submit">Search</button>
   </form>
-</div>  -->
+</div> 
 
+<!-- <mat-form-field>
+  <input type="text" placeholder="From" matInput [formControl]="myControl" [matAutocomplete]="auto" [(ngModel)]=search.source name="source">
+  <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+    <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+      {{option}}
+    </mat-option>
+  </mat-autocomplete>
+</mat-form-field>
+
+<mat-form-field >
+  <input type="text" placeholder="To" matInput [formControl]="myControl" [matAutocomplete]="auto" [(ngModel)]=search.destination name="destination">
+  <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+    <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+      {{option}}
+    </mat-option>
+  </mat-autocomplete>
+</mat-form-field>
+
+<mat-form-field >
+  <input  type="date" name="date" [(ngModel)]=search.date [formControl]="myControl"> 
+</mat-form-field>
+
+<button id="btn" type="submit" (click)="searchBus()">Search</button>  -->
+
+</div>
 
 <div class="offers">
 
@@ -49,33 +72,6 @@
      <h3>24/7</h3>
      <p>Service </p>
     </div> 
-    
-  </div>
-
-
- <mat-form-field>
-  <input type="text" placeholder="From" matInput [formControl]="myControl" [matAutocomplete]="auto" [(ngModel)]=search.source name="source">
-  <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
-    <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
-      {{option}}
-    </mat-option>
-  </mat-autocomplete>
-</mat-form-field>
-
-<mat-form-field >
-  <input type="text" placeholder="To" matInput [formControl]="myControl" [matAutocomplete]="auto" [(ngModel)]=search.destination name="destination">
-  <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
-    <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
-      {{option}}
-    </mat-option>
-  </mat-autocomplete>
-</mat-form-field>
-
-<mat-form-field >
-  <input  type="date" name="date" [(ngModel)]=search.date [formControl]="myControl"> 
-</mat-form-field>
-
-<button id="btn" type="submit" (click)="searchBus()">Search</button> 
 
 
 

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { BusService } from '../bus.service';
-import { Trip } from './models/Trip';
+import { Trip } from '../models/Trip';
 
 @Component({
   selector: 'app-my-trips',
@@ -11,7 +11,7 @@ import { Trip } from './models/Trip';
 export class MyTripsComponent implements OnInit {
 
   userId:number;
-  trip:Trip[]=[];
+  trip:Trip[] = [];
 
   constructor(private busService:BusService,private router:Router) { }
 

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Users } from '../register/register.component';
 import { ProfileService } from '../profile.service';
 import { Router } from '@angular/router';
+import { User } from '../models/User';
 
 @Component({
   selector: 'app-update-profile',
@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 export class UpdateProfileComponent implements OnInit {
 
   userId:number;
-  user:Users = new Users();
+  user:User = new User();
   constructor(private profileService:ProfileService,private router:Router) { }
 
   update(){

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AdminServiceService } from '../admin-service.service';
 import { Route } from '../models/route';
 
@@ -12,7 +13,7 @@ export class AddRouteComponent implements OnInit {
   route : Route = new Route();
   response : any;
 
-  constructor(private adminService : AdminServiceService) { }
+  constructor(private adminService : AdminServiceService, private router : Router) { }
 
   ngOnInit() {
   }
@@ -24,6 +25,9 @@ export class AddRouteComponent implements OnInit {
       alert(JSON.stringify(this.response));
     })
 
+  }
+  goBack(){
+    this.router.navigate(['admin-options']);
   }
 
 }

@@ -1,4 +1,5 @@
 export class Trip{
+  
   ticketId:number;
   boarding:string;
   droping:string;

@@ -1,79 +1,45 @@
-<fieldset>
-    <legend>Get Registered!</legend>
-    <form [formGroup]="registerForm" (ngSubmit)="register()">
-    <table>
-        <tr>
-            <td>
-            <label for="firstName">First Name</label>
-            </td> 
-            <td>
-            <input type="text" class="form-control" formControlName="firstname" [(ngModel)]="user.firstName">
-            <span class="error" *ngIf="firstname.invalid && firstname.touched">First Name is Required</span>
-            </td>  
-        </tr>
-        <br>
-        <tr>
-            <td>
-            <label for="lastName">Last Name</label>
-            </td> 
-            <td>
-            <input type="text" id="lastname" formControlName="lastname" [(ngModel)]="user.lastName">
-            <span class="error" *ngIf="lastname.invalid && firstname.touched">Last Name is Required</span>
-            </td>  
-        </tr>
-        <br>
-        <tr>
-            <td>
-            <label for="email">Email ID</label>
-            </td> 
-            <td>
-            <input type="email" id="email" formControlName="email" [(ngModel)]="user.email">
-            <span class="error" *ngIf="email.invalid && email.touched">Email is Required</span>
-            </td>  
-        </tr>
-        <br>
-        <tr>
-            <td>
-            <label for="password">Password</label>
-            </td> 
-            <td>
-            <input type="password" id="password" formControlName="password" [(ngModel)]="user.password" maxlength="8">
-            </td>  
-        </tr>
-        <br>
-        <tr>
-            <td>
-            <label for="contact">Contact Number</label>
-            </td> 
-            <td>
-            <input type="tel" id="contact" formControlName="contact" [(ngModel)]="user.contact">
-            </td>  
-        </tr>
-        <br>
-        <tr>
-            <td>
-            <label for="gender">Gender</label>
-            </td> 
-            <td>
-            <label for="male">Male</label>
-            <input type="radio" id="male" formControlName="gender" value="male" [(ngModel)]="user.gender">
-            <label for="female">Female</label>
-            <input type="radio" id="female" formControlName="gender" value="female" [(ngModel)]="user.gender">
-            </td>  
-        </tr>
-        <br>
-        <tr>
-            <td>
-                <label for="dob">Date Of Birth</label>
-            </td>
-            <td>
-                <input type="date" id="dob" formControlName="dob" [(ngModel)]="user.dob">
-            </td>
-        </tr>
-        <br>
-        
-    </table>
+    <div class="container">
+    <form (ngSubmit)="register()">
     
-    <input type="submit" value="Submit">
+            <label for="firstName">First Name</label>
+            <input type="text" name="firstName" [(ngModel)]=user.firstName><br>
+            <!-- <span class="error" *ngIf="firstname.invalid && firstname.touched">First Name is Required</span> -->
+    
+            <label for="lastName">Last Name</label>
+    
+            <input type="text" name="lastname" [(ngModel)]=user.lastName><br>
+            <!-- <span class="error" *ngIf="lastname.invalid && firstname.touched">Last Name is Required</span> -->
+
+            <label for="email">Email ID</label>
+            <input type="email" name="email" [(ngModel)]=user.email><br>
+            <!-- <span class="error" *ngIf="email.invalid && email.touched">Email is Required</span>  -->
+
+            <label for="password">Password</label>
+            <input type="password" name="password" [(ngModel)]=user.password maxlength="8"><br>
+            <label for="contact">Contact Number</label>
+            <input type="number" name="contact" [(ngModel)]=user.contact><br>
+
+
+            <label for="gender">Gender</label><br>
+            <select name="gender" [(ngModel)]=user.gender name="gender">
+                <option>Male</option>
+                <option>Female</option>
+            </select>
+            
+      
+            <label for="dob">Date Of Birth</label>
+            
+            <input type="date" name="dob" [(ngModel)]=user.dob>
+
+    
+            <div class="butt">
+                <div class="btn">
+                <button class="cancelbtn" (click) = "goBack()">Go Back</button>
+                </div>
+                <br><br>
+                <div class="btn2">
+                <button class="subbutton">Register</button>
+                </div>
+            </div>
 </form>
-</fieldset>
+</div>

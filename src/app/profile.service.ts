@@ -10,12 +10,12 @@ export class ProfileService {
 
   constructor(private http: HttpClient) { }
   profile(userId:number):Observable<Users>{
-    let url="http://localhost:8081/project/api/profile/?userId="+userId;
+    let url="http://localhost:8080/project/api/profile/?userId="+userId;
     return this.http.get<Users>(url);
   }
 
   profileUpdate(user:Users):Observable<any>{
-    let url = "http://localhost:8081/project/api/updateProfile";
+    let url = "http://localhost:8080/project/api/updateProfile";
     return this.http.post(url,user);
   }
 }

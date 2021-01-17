@@ -1,8 +1,9 @@
-<div>
+<div class="pay">
 <form (ngSubmit)="payNow()">
 
-    Payment Type: <select id="types">
-        <option>Payment Type</option>
+    Payment Type:<br>
+    <select id="paymentType" [(ngModel)]=payment.paymentType name="paymentType">
+        <option value="" disabled selected>Payment Type</option>
         <option>Debit Car</option>
         <option>Credit Card</option>
         <option>UPI</option>
@@ -10,12 +11,20 @@
     <!-- userId: <input type = "number" name="uId" [(ngModel)]=payment.userId><br>
     TicketId : <input type ="number" name= "tId" [(ngModel)]=payment.ticketId><br> -->
     <!-- amount : <input type="number" name="amount" [(ngModel)]=payment.amount><br> -->
-    CarNumber  : <input type="number" name="card" [(ngModel)]=payment.cardNumber><br>
-    Name  <input type="text" name="name" [(ngModel)]=payment.nameOnCard><br>
-    Expiry Date : <input type="date" name="Expiry" [(ngModel)]=payment.expiryDate><br>
-    Cvv : <input type="number" name="cvv" [(ngModel)]=payment.cvv><br>
+    <input type="number" name="card" placeholder="Enter Card Number" [(ngModel)]=payment.cardNumber><br>
+    <input type="text" name="name" placeholder="Enter Name on the Card" [(ngModel)]=payment.nameOnCard><br>
+    <input type="text" name="Expiry" placeholder="Enter Expiry Date" [(ngModel)]=payment.expiryDate><br>
+    <input type="number" name="cvv" placeholder="Enter CVV" [(ngModel)]=payment.cvv><br>
    
-
-    <button>Confirm</button>
+  
+    <div class="butt">
+        <div class="btn">
+        <button class="cancelbtn" (click) = "goBack()">Go Back</button>
+        </div>
+        <br><br>
+        <div class="btn2">
+        <button class="subbutton">Confirm</button>
+        </div>
+    </div>
 </form>
 </div>

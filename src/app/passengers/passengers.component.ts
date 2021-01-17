@@ -19,8 +19,9 @@ export class PassengersComponent implements OnInit {
   num:number;
   response : any;
   book: Book = new Book();
-  
-
+  bus : any ="../assets/images/bus.png";
+  path :any ="../assets/images/path.png";
+  rupee :any ="../assets/images/rupee.png";
   constructor(private passengerService  : PassengerService, private router : Router) { }
 
   ngOnInit() {
@@ -35,8 +36,12 @@ export class PassengersComponent implements OnInit {
     this.booking.droping = this.book.dropping;
     this.booking.amount = this.book.fare;
     this.booking.duration = this.book.duration;
+    this.booking.busId=this.book.busId;
     this.booking.busName=this.book.busName;
     this.booking.date = this.book.date;
+    this.booking.source=this.book.source;
+    this.booking.destination=this.book.destination;
+
 
     //alert(JSON.stringify(this.booking));
    // alert(this.booking.userId);
@@ -63,6 +68,10 @@ export class PassengersComponent implements OnInit {
     this.router.navigate(['payment']);
   })
 
+}
+
+goBack(){
+  this.router.navigate(['view-bus']);
 }
 
 }

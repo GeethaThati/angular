@@ -1,3 +1,4 @@
+
 <div class="container">
 <form (ngSubmit)="addPassenger()">
     <br>
@@ -6,23 +7,67 @@
     <!-- <input type="text" name="boarding" [(ngModel)]=booking.boarding><br>
     <input type="text" name="droping" [(ngModel)]=booking.droping><br>
     <input type="number" name="amount" [(ngModel)]=booking.amount><br> -->
+        
     <ul *ngFor= "let s of seats; let x = index;">
-     <div class="passenger">
-     <li>Name: <input type="text" name="name" [(ngModel)]=booking.passengers[x].name> </li><br>
-     <li>Age : <input type="number" name="age" [(ngModel)]=booking.passengers[x].age></li><br>
-     <li>Gender: <input type="text" name="gender" [(ngModel)]=booking.passengers[x].gender></li><br>
-     <li>Seat No:<input type="number" name="seatNo"[(ngModel)]=booking.passengers[x].seatNo></li><br>
+        
+        <div class="passenger">
+         <br>
+         <h3>Passenger {{x+1}}</h3>
+     <li> <input type="text" name="name" placeholder="Enter Name" [(ngModel)]=booking.passengers[x].name> </li><br>
+     <li><input type="number" name="age" placeholder="Enter Age" [(ngModel)]=booking.passengers[x].age></li><br>
+     <li><input type="text" name="gender" placeholder="Enter Gender" [(ngModel)]=booking.passengers[x].gender></li><br>
+     <li><input type="number" name="seatNo" placeholder="Enter Seat No" [(ngModel)]=booking.passengers[x].seatNo></li><br>
     </div>
+
     </ul>
+
     <div class="data">
-    {{booking.routeId}}<br>
-    {{booking.boarding}}<br>
-    {{booking.droping}}<br>
-    {{booking.duration}}<br>
+    <br>
+    <h3 style=" text-align : center">Details Of Trip</h3>
+    <hr>
+    <h4>Bus Details</h4>
+    <div class="bus"><img [src]="bus" width="100%" height="100%"></div>
+    
+    <p>{{booking.busId}}<br>
     {{booking.busName}}<br>
+     Seats: {{num}}</p>
+    <br>
+    <hr>
+    <h4>Route Details - {{booking.routeId}}</h4>
+    <div class="path"><img [src]="path" width="100%" height="100%"></div>
+    <p><b>Source</b><br>
+    {{booking.source}}<br>
+    {{booking.boarding}}<br>
+    <br><br>
     {{booking.date}}<br>
-    {{booking.amount}}<br>
+    {{booking.duration}}<br>
+        <br><br>
+    <b>Destination</b><br>
+    {{booking.destination}}<br>
+    {{booking.droping}}<br>
+    </p>
+    <br>
+    <hr>
+
+    <h4>Amount Details</h4>
+    <div class="rup"><img [src]="rupee" width="100%" height="100%"></div>
+   <p> Fare : {{booking.amount}}</p>
+   <br>
+   <b><hr></b>
+   
+   <h3>Total &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         {{booking.amount}}</h3>
+   
     </div>
-    <button>Proceed To Pay</button>
+    <div class="butt">
+    <div class="btn">
+    <button class="cancelbtn" (click) = "goBack()">Go Back</button>
+    </div>
+    <br><br>
+    <div class="btn2">
+    <button class="subbutton">Proceed To Pay</button>
+    </div>
+</div>
 </form>
 </div>

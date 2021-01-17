@@ -1,0 +1,23 @@
+h2,p{
+    text-align: center;
+}
+.dash{
+    border: 1px solid black;
+    width : 20%;
+    height: 40%;
+}
+  a:link, a:visited {
+   
+    text-align: center;
+    text-decoration: none;
+    color: white;
+  }
+  button {
+    background-color: rgb(73, 73, 248);
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
+    width: 70%;
+  }
+  

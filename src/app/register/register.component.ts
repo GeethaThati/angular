@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { RegisterService } from '../register.service';
 import {FormControl,FormGroup,Validators,FormBuilder,NgForm} from '@angular/forms';
+import { User } from '../models/User';
 
 
 @Component({
@@ -11,15 +12,16 @@ import {FormControl,FormGroup,Validators,FormBuilder,NgForm} from '@angular/form
 })
 export class RegisterComponent{
    
-  user:Users=new Users();
+  user:  User = new User();
   message:string;
   constructor(private registerService:RegisterService,private router:Router) { }
   register(){
+    alert(JSON.stringify(this.user));
     this.registerService.register(this.user).subscribe(response=>{
       alert(JSON.stringify(response))
       alert(response.status)
       if(response.status = 'SUCCESS'){
-        this.router.navigate(['thankyou']);
+       // this.router.navigate(['thankyou']);
       }
       else{
         this.message = "Registration failed";
@@ -27,28 +29,23 @@ export class RegisterComponent{
       
     })
     }
-    registerForm=new FormGroup({
-      firstname:new FormControl('',[Validators.required]),
-      lastname:new FormControl('',[Validators.required]),
-      email:new FormControl('',[Validators.required,Validators.email]),
-      password:new FormControl('',[Validators.required,Validators.minLength(8)])
-    })
-    get firstname(){return this.registerForm.get('firstName')}
-    get lastname(){return this.registerForm.get('lastName')}
-    get email(){return this.registerForm.get('email')}
-    get password(){return this.registerForm.get('password')}
+
+    goBack(){
+      this.router.navigate(['home']);
+    }
     
   }
-export class Users{
-  firstName:string;
-  lastName:string;
-  email:string;
-  password:string;
-  contact:number;
-  gender:boolean;
-  dob:Date;
-  wallet:number;
-  
-}
 
+
+  export class Users{
+    firstName:string;
+    lastName:string;
+    email:string;
+    password:string;
+    contact:number;
+    gender:string;
+    dob:Date;
+    wallet:number;
+    
+  }
 
