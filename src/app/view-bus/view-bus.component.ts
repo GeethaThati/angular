@@ -30,6 +30,7 @@ export class ViewBusComponent implements OnInit {
   view:any = "View Seats";
   hide:any[]=[];
   elementsShowing = new Set<Bus>();
+  response:Stop;
 
   toggle(bus:Bus){
     if(this.elementsShowing.has(bus)){
@@ -87,8 +88,10 @@ export class ViewBusComponent implements OnInit {
       //alert(val.source);
       this.busService.searchStops(val.source,val.id).subscribe(
         response=> {
+          // this.response = response;
+          // this.boarding.push(this.response);
           sessionStorage.setItem('sourceStops',JSON.stringify(response));
-          this.boarding= JSON.parse(sessionStorage.getItem('sourceStops'));
+          this.boarding=JSON.parse(sessionStorage.getItem('sourceStops'));
           // this.boarding.push(response[0]);
           // this.boarding.push(response[1]);
           //this.var.push(response);
@@ -97,7 +100,7 @@ export class ViewBusComponent implements OnInit {
           // }
          // alert(response[0]);
           //this.boarding.push(response[0]);
-          alert(JSON.stringify(response));
+          alert(JSON.stringify(this.boarding));
           //alert(this.boarding[0].stop);
           
           
@@ -107,12 +110,14 @@ export class ViewBusComponent implements OnInit {
 
       this.busService.searchStops(val.destination,val.id).subscribe(
           response => {
+            // this.response = response;
+            // this.dropping.push(this.response);
             sessionStorage.setItem('destStops',JSON.stringify(response));
-            this.dropping= JSON.parse(sessionStorage.getItem('destStops'));
+            this.dropping=JSON.parse(sessionStorage.getItem('destStops'));
            //alert(JSON.stringify(response));
            //this.dropping.push(response);
            // alert(this.dropping[0].stop);
-         // alert(JSON.stringify(this.dropping));
+          alert(JSON.stringify(this.dropping));
         
           }
       );

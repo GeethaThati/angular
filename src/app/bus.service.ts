@@ -36,7 +36,7 @@ export class BusService {
   }
 
   changePassword(email:string,password:string):Observable<any>{
-    let url = "http://localhost:8081/project/api/changePassword?email="+email+"&pass="+password;
+    let url = "http://localhost:8080/project/api/changePassword?email="+email+"&pass="+password;
     return this.http.get<any>(url);
   }
 

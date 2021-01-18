@@ -1,6 +1,5 @@
-
-    <div class="container">
-    <form (ngSubmit)="register()">
+<div class="container">
+<form (ngSubmit)="register()" [formGroup]="contactForm">
     
 <!-- <fieldset>
     <legend>Get Registered!</legend>
@@ -10,34 +9,30 @@
             <td>-->
 
             <label for="firstName">First Name</label>
-            <input type="text" name="firstName" [(ngModel)]=user.firstName><br>
            <!-- <span class="error" *ngIf="firstname.invalid && firstname.touched">First Name is Required</span> -->
+            <input type="text" name="firstName" [(ngModel)]=user.firstName formControlName="fname">
+            <span class="check" *ngIf="contactForm.get('fname').touched && contactForm.get('fname').hasError('required')">Please fill this field</span><br>
     
             <label for="lastName">Last Name</label>
     
-            <input type="text" name="lastname" [(ngModel)]=user.lastName><br>
-            <!-- <span class="error" *ngIf="lastname.invalid && firstname.touched">Last Name is Required</span> -->
-
-            <label for="email">Email ID</label>
-            <input type="email" name="email" [(ngModel)]=user.email><br>
-            <!-- <span class="error" *ngIf="email.invalid && email.touched">Email is Required</span>  -->
+            <input type="text" name="lastname" [(ngModel)]=user.lastName formControlName="uname">
+            <span class="check" *ngIf="contactForm.get('uname').touched && contactForm.get('uname').hasError('required')">Please fill this field</span><br>
+           
+            <label for="email">Email</label>
+            <input type="email" name="email" [(ngModel)]=user.email formControlName="emailid">
+            <span class="check" *ngIf="contactForm.get('emailid').touched && contactForm.get('emailid').hasError('required')">Please fill this field</span><br>
+            <span class="check" *ngIf="contactForm.get('emailid').touched && contactForm.get('emailid').hasError('email')">
+             Please enter a valid email id
+            </span><br>
 
             <label for="password">Password</label>
-            <input type="password" name="password" [(ngModel)]=user.password maxlength="8"><br>
-            <label for="contact">Contact Number</label>
-            <input type="number" name="contact" [(ngModel)]=user.contact><br>
-
-
-            <label for="gender">Gender</label><br>
-            <select name="gender" [(ngModel)]=user.gender name="gender">
-                <option>Male</option>
-                <option>Female</option>
-            </select>
-            
-      
-            <label for="dob">Date Of Birth</label>
-            
-            <input type="date" name="dob" [(ngModel)]=user.dob>
+            <input type="password" name="password" [(ngModel)]=user.password maxlength="8" formControlName="pwd">
+            <span class="check" *ngIf = "contactForm.get('pwd').touched && contactForm.get('pwd').hasError('required')">
+                Please fill this field
+              </span><br>
+              <span class="check" *ngIf = "contactForm.get('pwd').touched && contactForm.get('pwd').hasError('minlength')">
+                Password should contain minimum 8 characters
+              </span><br>
 
     
             <div class="butt">

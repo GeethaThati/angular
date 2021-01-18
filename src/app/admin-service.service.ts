@@ -34,12 +34,12 @@ export class AdminServiceService {
   }
 
   addRoute(route: Route){
-    let url = "http://localhost:8080/project/api/addroute";
+    let url = "http://localhost:8081/project/api/addroute";
    return this.http.post(url, route); 
   }
 
   addStop(Stop: AddStop){
-    let url = "http://localhost:8080/project/api/addstop";
+    let url = "http://localhost:8081/project/api/addstop";
     return this.http.post(url,stop);
   }
 }
