@@ -33,6 +33,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { MyTripsComponent } from './my-trips/my-trips.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { ViewTicketComponent } from './view-ticket/view-ticket.component';
+import { EmailTicketComponent } from './email-ticket/email-ticket.component';
 
 
 @NgModule({
@@ -63,7 +64,8 @@ import { ViewTicketComponent } from './view-ticket/view-ticket.component';
     ProfileComponent,
     MyTripsComponent,
     ChangePasswordComponent,
-    ViewTicketComponent
+    ViewTicketComponent,
+    EmailTicketComponent
   ],
   imports: [
     BrowserModule,
