@@ -34,4 +34,8 @@ export class UpdateProfileComponent implements OnInit {
     );
   }
 
+ goBack(){
+   this.router.navigate(['dashboard']);
+ }
+
 }

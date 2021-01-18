@@ -22,7 +22,6 @@ input[type=text], input[type=password], input[type=email], input[type=number], i
 
 /* Add padding to containers */
 .container {
-  border: 2px solid blue;
   padding: 16px;
   width: 350px;
   margin: auto;
@@ -35,7 +34,7 @@ select {
  
 }
 .subbutton {
-  background-color: blue;
+  background-color: rgb(72, 143, 214);
   color: white;
   padding: 14px 20px;
   border: none;

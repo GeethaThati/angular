@@ -17,7 +17,7 @@
 
 .form-inline button {
   padding: 10px 20px;
-  background-color: blue;
+  background-color: rgb(72, 143, 214);
   border: 1px solid #ddd;
   color: white;
 }
@@ -28,7 +28,7 @@
 
 #btn {
   padding: 10px 20px;
-  background-color: blue;
+  background-color: rgb(72, 143, 214);
   border: 1px solid #ddd;
   color: white;
 }

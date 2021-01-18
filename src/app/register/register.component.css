@@ -65,7 +65,7 @@ input[type="tel"] {
 }
 
 button {
-  background-color: blue;
+  background-color: rgb(72, 143, 214);
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -113,7 +113,6 @@ input[type=text], input[type=password], input[type=email], input[type=number], i
   
   /* Add padding to containers */
   .container {
-    border: 2px solid blue;
     padding: 16px;
     width: 350px;
     margin: auto;
@@ -126,7 +125,7 @@ input[type=text], input[type=password], input[type=email], input[type=number], i
    
   }
   .subbutton {
-    background-color: blue;
+    background-color: rgb(72, 143, 214);
     color: white;
     padding: 14px 20px;
     border: none;
@@ -160,7 +159,7 @@ input[type=text], input[type=password], input[type=email], input[type=number], i
     width : 20%;
     height : 30%;
     margin-left: 45%;
-    margin-top: -16%;
+    margin-top: -20%;
   }
   .butt{
     width :150%;
