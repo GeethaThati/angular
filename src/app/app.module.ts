@@ -32,6 +32,7 @@ import { UpdateProfileComponent } from './update-profile/update-profile.componen
 import { ProfileComponent } from './profile/profile.component';
 import { MyTripsComponent } from './my-trips/my-trips.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
+import { ViewTicketComponent } from './view-ticket/view-ticket.component';
 
 
 @NgModule({
@@ -61,7 +62,8 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
     UpdateProfileComponent,
     ProfileComponent,
     MyTripsComponent,
-    ChangePasswordComponent
+    ChangePasswordComponent,
+    ViewTicketComponent
   ],
   imports: [
     BrowserModule,

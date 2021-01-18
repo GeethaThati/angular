@@ -10,7 +10,7 @@ export class PaymentService {
   constructor(private http: HttpClient) { }
 
   payNow(payment : Payment){
-    let url = "http://localhost:8080/project/api/payment";
+    let url = "http://localhost:8081/project/api/payment";
     return this.http.post(url,payment);
   }
 }

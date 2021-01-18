@@ -11,10 +11,17 @@ import { User } from '../models/User';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent{
-   
+  contactForm:FormGroup;
   user:  User = new User();
   message:string;
-  constructor(private registerService:RegisterService,private router:Router) { }
+  constructor(private registerService:RegisterService,private router:Router,private formBuilder:FormBuilder) { 
+    this.contactForm = formBuilder.group({
+      fname : ['',[Validators.required,Validators.minLength(4)]],
+      emailid : ['',[Validators.required,Validators.email]],
+      uname:['',[Validators.required,Validators.minLength(4)]],
+      pwd:['',[Validators.required,Validators.minLength(8)]],
+    });
+  }
   register(){
     alert(JSON.stringify(this.user));
     this.registerService.register(this.user).subscribe(response=>{

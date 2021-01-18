@@ -16,22 +16,22 @@ export class BusService {
   constructor(private http:HttpClient) { }
 
   searchBus(search:Search):Observable<Route[]>{
-    let url="http://localhost:8080/project/api/search";
+    let url="http://localhost:8081/project/api/search";
     return this.http.post<Route[]>(url,search);
   }
 
   searchStops(city:string,routeId:number):Observable<StopDetails>{
-    let url="http://localhost:8080/project/api/stops?city="+city+"&id="+routeId;
+    let url="http://localhost:8081/project/api/stops?city="+city+"&id="+routeId;
     return this.http.get<StopDetails>(url);
   }
 
   cancelTicket(ticketId:number):Observable<any>{
-    let url="http://localhost:8080/project/api/cancel?ticketId="+ticketId;
+    let url="http://localhost:8081/project/api/cancel?ticketId="+ticketId;
     return this.http.get<any>(url);
   }
 
   fetchTrips(userId:number):Observable<Trip[]>{
-    let url = "http://localhost:8080/project/api/myTrips?userId="+userId;
+    let url = "http://localhost:8081/project/api/myTrips?userId="+userId;
     return this.http.get<Trip[]>(url);
   }
 
