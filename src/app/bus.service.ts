@@ -41,7 +41,7 @@ export class BusService {
   }
 
   emailTicket(ticketId:number,email:string):Observable<any>{
-    let url = "http://localhost:8081/project/api/createPdf?id="+ticketId+"&email="+email;
+    let url = "http://localhost:8080/project/api/createPdf?id="+ticketId+"&email="+email;
     return this.http.get<any>(url);
   }
 
