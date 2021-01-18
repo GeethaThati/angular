@@ -65,7 +65,7 @@ input[type="tel"] {
 }
 
 button {
-  background-color: blue;
+  background-color: rgb(72, 143, 214);
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -116,7 +116,6 @@ input[type="date"] {
 
 /* Add padding to containers */
 .container {
-  border: 2px solid blue;
   padding: 16px;
   width: 350px;
   margin: auto;
@@ -128,7 +127,7 @@ select {
   height: 35px;
 }
 .subbutton {
-  background-color: blue;
+  background-color: rgb(72, 143, 214);
   color: white;
   padding: 14px 20px;
   border: none;
@@ -160,17 +159,9 @@ button:hover {
   width: 20%;
   height: 30%;
   margin-left: 45%;
-  margin-top: -16%;
+  margin-top: -20%;
 }
 .butt {
   width: 150%;
   height: 60%;
-}
-input.ng-touched.ng-invalid {
-  border: 2px solid red;
-}
-.check {
-  color: red;
-  padding: 2px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }

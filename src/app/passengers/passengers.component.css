@@ -15,8 +15,6 @@ li{
     box-sizing: border-box;
     
   }
-  
-
   .main {   
     width: 100%;
     margin: auto;
@@ -39,12 +37,11 @@ li{
 
   /* Set a style for all buttons */
   .subbutton {
-    background-color: blue;
+    background-color: rgb(72, 143, 214);
     color: white;
     padding: 14px 20px;
     border: none;
     cursor: pointer;
-    width: 100%;
   }
   
   /* Add a hover effect for buttons */
@@ -96,7 +93,7 @@ li{
 
   .bus{
     width :20%;
-    height: 10%;
+    height: 8%;
     position: absolute;
     top: 17%;
   }
@@ -115,7 +112,7 @@ li{
     width:13%;
     height:5%;
     position: absolute;
-    top: 82%;
+    top: 73%;
   }
   label{
     display: inline-block;

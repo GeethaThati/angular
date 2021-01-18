@@ -2,9 +2,9 @@ h2,p{
     text-align: center;
 }
 .dash{
-    border: 1px solid black;
     width : 20%;
     height: 40%;
+    margin-left: 43%;
 }
   a:link, a:visited {
    
@@ -13,11 +13,12 @@ h2,p{
     color: white;
   }
   button {
-    background-color: rgb(73, 73, 248);
+    background-color: rgb(72, 143, 214);
     color: white;
     padding: 14px 20px;
     border: none;
     cursor: pointer;
     width: 70%;
+    height: 60px;
   }
   

@@ -40,6 +40,10 @@ export class ChangePasswordComponent implements OnInit {
   ngOnInit() {
   }
 
+  goBack(){
+    this.router.navigate(['dashboard']);
+  }
+
 }
 
 export class Password{

@@ -34,8 +34,9 @@ payNow(){
 
   alert(JSON.stringify(this.payment));
 
+  
   this.paymentService.payNow(this.payment).subscribe(response =>{
-  alert(JSON.stringify(response));
+   alert(JSON.stringify(response));
 })
 
   }

@@ -11,10 +11,10 @@
     <!-- userId: <input type = "number" name="uId" [(ngModel)]=payment.userId><br>
     TicketId : <input type ="number" name= "tId" [(ngModel)]=payment.ticketId><br> -->
     <!-- amount : <input type="number" name="amount" [(ngModel)]=payment.amount><br> -->
-    <input type="number" name="card" placeholder="Enter Card Number" [(ngModel)]=payment.cardNumber><br>
+    <input type="number" name="card" placeholder="Enter Card Number" [(ngModel)]=payment.cardNumber maxlength="12"><br>
     <input type="text" name="name" placeholder="Enter Name on the Card" [(ngModel)]=payment.nameOnCard><br>
     <input type="text" name="Expiry" placeholder="Enter Expiry Date" [(ngModel)]=payment.expiryDate><br>
-    <input type="number" name="cvv" placeholder="Enter CVV" [(ngModel)]=payment.cvv><br>
+    <input type="password" name="cvv" placeholder="Enter CVV" [(ngModel)]=payment.cvv maxlength="3"><br>
    
   
     <div class="butt">

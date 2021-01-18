@@ -22,7 +22,7 @@ export class SearchBusComponent implements OnInit {
   trip:tripDetails = new tripDetails();
   details:tripDetails[] = [];
 
-  img1 : any ="../assets/images/cover.jpg";
+  img1 : any ="../assets/images/cover4.jpg";
   offer1 : any ="../assets/images/offer1.png";
   offer2: any = "../assets/images/offer3.jpg";
   offer3: any = "../assets/images/offer4.jpg";

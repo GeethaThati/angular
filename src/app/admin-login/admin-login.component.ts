@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AdminLogin } from '../models/Adminlogin';
 import { AdminServiceService } from '../admin-service.service';
 import { Router } from '@angular/router';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-admin-login',
@@ -14,7 +15,15 @@ export class AdminLoginComponent implements OnInit {
   message : String;
   response : any;
 
-  constructor(private adminService :AdminServiceService, private router :Router) { }
+  contactForm:FormGroup;
+  email:string;
+
+  constructor(private adminService :AdminServiceService, private router :Router, private formBuilder : FormBuilder) { 
+    this.contactForm = formBuilder.group({
+      emailid : ['',[Validators.required,Validators.email]]
+    }
+  );
+  }
 
   ngOnInit() {
   }
@@ -35,6 +44,11 @@ export class AdminLoginComponent implements OnInit {
       else
         this.message = this.response.message;
     })
+
+  }
+
+  goBack(){
+    this.router.navigate(['home']);
   }
 
 }

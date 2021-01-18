@@ -18,10 +18,18 @@
 <input type="date" [(ngModel)]=this.user.dob name="dob"><br>
 <label>Wallet Balance</label>
 <h4>{{this.user.wallet}}</h4><br>
-<button type="submit" class="button">Save And Update</button>
+
+<div class="butt">
+  <div class="btn">
+  <button class="cancelbtn" (click) = "goBack()">Go Back</button>
+  </div>
+  <br><br>
+  <div class="btn2">
+  <button class="subbutton">Save and Update</button>
+  </div>
 </div>
 
-  
+</div>
 </form>
 </div>
 </div>

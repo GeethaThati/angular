@@ -11,9 +11,21 @@ input[type="datetime"] {
   box-sizing: border-box;
 }
 
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+input[type="datetime"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
 /* Add padding to containers */
 .container {
-  border: 2px solid blue;
   padding: 16px;
   width: 350px;
   margin: auto;
@@ -25,12 +37,26 @@ select {
   height: 40px;
 }
 .subbutton {
-  background-color: blue;
+  background-color: rgb(72, 143, 214);
   color: white;
   padding: 14px 20px;
   border: none;
   cursor: pointer;
   width: 100%;
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra style for the cancel button (red) */
+.cancelbtn {
+  width: 100%;
+  padding: 14px 20px;
+  border: none;
+  cursor: pointer;
+  background-color: #f44336;
 }
 
 /* Add a hover effect for buttons */

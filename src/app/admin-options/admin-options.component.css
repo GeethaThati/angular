@@ -6,18 +6,19 @@
     color: white;
   }
   button {
-    background-color: rgb(73, 73, 248);
+    background-color: rgb(72, 143, 214);
     color: white;
     padding: 14px 20px;
     border: none;
     cursor: pointer;
     width: 70%;
+    height: 70px;
   }
 
   .container {
     width: 250px;
-    padding: 20px 10px 20px 40px;
-    background-color: rgb(240, 240, 252);
+    /* padding: 20px 10px 20px 40px; */
+    /* background-color: rgb(240, 240, 252); */
     position: absolute;
   }
   .text{
