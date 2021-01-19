@@ -1,0 +1,26 @@
+<div class="container">
+    <h3 style="text-align:center;color:dodgerblue;">All Buses</h3>
+  <div class="details">
+    <table>
+      <div >
+        <tr class="head">
+          <th>Bus Id</th>
+          <th>Bus Name</th>
+          <th>Bus Type</th>
+          <th>No.Of Seats</th>
+        </tr>
+          <tr *ngFor="let bus of buses">
+            <td>{{bus.busId}}</td>
+            <td>{{bus.busName}}</td>
+            <td>{{bus.busType}}</td>
+            <td>{{bus.noOfseats}}</td>
+          </tr>
+      </div>
+    </table>
+   
+  </div>
+  <div class="btn">
+    <br>
+    <button (click)="goBack()">Go Back</button></div>
+  </div>
+  

@@ -26,6 +26,7 @@ import { MyTripsComponent } from './my-trips/my-trips.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { ViewTicketComponent } from './view-ticket/view-ticket.component';
 import { EmailTicketComponent } from './email-ticket/email-ticket.component';
+import { BusListComponent } from './bus-list/bus-list.component';
 
 
 const routes: Routes = [
@@ -57,7 +58,8 @@ const routes: Routes = [
   { path: 'dashboard/my-trips', component:MyTripsComponent},
   { path: 'dashboard/change-password',component:ChangePasswordComponent},
   { path: 'view-ticket',component:ViewTicketComponent},
-  { path: 'email-ticket', component:EmailTicketComponent}
+  { path: 'email-ticket', component:EmailTicketComponent},
+  { path: 'admin-options/bus-list', component:BusListComponent}
 
 ];
 

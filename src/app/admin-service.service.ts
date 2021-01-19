@@ -42,4 +42,10 @@ export class AdminServiceService {
     let url = "http://localhost:8080/project/api/addstop";
     return this.http.post(url,stop);
   }
+
+ fetchBuses(){
+  let url= "http://localhost:8080/project/api/buses";
+  return this.http.get(url);
+}
+
 }
