@@ -27,13 +27,14 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
 import { ViewTicketComponent } from './view-ticket/view-ticket.component';
 import { EmailTicketComponent } from './email-ticket/email-ticket.component';
 import { BusListComponent } from './bus-list/bus-list.component';
+import { ViewRoutesComponent } from './view-routes/view-routes.component';
 
 
 const routes: Routes = [
   { path: 'home' ,component:HomeComponent},
-  {path:'register',component:RegisterComponent},
-  {path:'login',component:LoginComponent},
-  {path:'thankyou',component:ThankyouComponent},
+  { path:'register',component:RegisterComponent},
+  { path:'login',component:LoginComponent},
+  { path:'thankyou',component:ThankyouComponent},
   { path: 'view-seats', component:ViewSeatsComponent},
   { path: 'passengers', component:PassengersComponent},
   { path: 'view-bus',component:ViewBusComponent},
@@ -59,7 +60,8 @@ const routes: Routes = [
   { path: 'dashboard/change-password',component:ChangePasswordComponent},
   { path: 'view-ticket',component:ViewTicketComponent},
   { path: 'email-ticket', component:EmailTicketComponent},
-  { path: 'admin-options/bus-list', component:BusListComponent}
+  { path: 'admin-options/bus-list', component:BusListComponent},
+  { path: 'admin-options/view-routes', component: ViewRoutesComponent}
 
 ];
 

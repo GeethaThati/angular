@@ -17,7 +17,7 @@ export class UpdateBusRouteComponent implements OnInit {
   }
 
   updateRoute(){
-    alert(JSON.stringify(this.updateBus));
+   // alert(JSON.stringify(this.updateBus));
     alert("Route Updated Successfully");
     this.adminService.updateBus(this.updateBus).subscribe(response =>{
       alert(JSON.stringify("Route Updated Successfully"));

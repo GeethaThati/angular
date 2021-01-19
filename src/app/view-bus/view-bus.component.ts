@@ -42,20 +42,10 @@ export class ViewBusComponent implements OnInit {
       
       this.view = "Hide Seats";
     }
-    //this.isShowDiv= !this.isShowDiv;
-    
-    // alert(JSON.stringify(bus));
-    // //alert(JSON.stringify(route));
-    // alert(d);
   }
 
   seatsBook(bus:Bus,d:Route){
-    //alert(JSON.stringify(bus));
-    //alert(d.dateOfDepature);
     this.amount= document.getElementById("fare").innerHTML;
-  //  this.routeId = document.getElementById("routeId").innerHTML;
-   // this.r = document.getElementById("r").innerHTML;
-    // alert(this.r);
     this.book.fare = this.amount;
     this.book.routeId = d.id;
     this.book.busName = bus.busName;
@@ -64,12 +54,7 @@ export class ViewBusComponent implements OnInit {
     this.book.busId = bus.busId;
     this.book.source = d.source;
     this.book.destination = d.destination;
-  // this.book.routeId= this.arr[this.r].id;
-  //  this.book.date = this.arr[this.r].dateOfDepature;
-   // this.book.busName = this.arr[this.r].buses[this.bus].busName;
-   // alert(this.routeId);
-    //this.book.fare = this.book.noOfSeats*this.arr[0].fare;
-    alert(JSON.stringify(this.book));
+    //alert(JSON.stringify(this.book));
     sessionStorage.setItem("BoardingDetails",JSON.stringify(this.book));
     this.router.navigate(['passengers']);
     
@@ -78,46 +63,28 @@ export class ViewBusComponent implements OnInit {
   constructor(private busService:BusService, private router : Router) { }
 
   ngOnInit() {
-    //alert(sessionStorage.getItem('routeDetails'));
     this.arr=JSON.parse(sessionStorage.getItem('routeDetails'));
-    alert(JSON.stringify(this.arr));
+   // alert(JSON.stringify(this.arr));
     this.num = this.arr.length;
-    //alert(this.num);
-   // alert(this.arr[0].destination);
+  
     for(let val of this.arr){
-      //alert(val.source);
       this.busService.searchStops(val.source,val.id).subscribe(
         response=> {
-          // this.response = response;
-          // this.boarding.push(this.response);
+    
           sessionStorage.setItem('sourceStops',JSON.stringify(response));
           this.boarding=JSON.parse(sessionStorage.getItem('sourceStops'));
-          // this.boarding.push(response[0]);
-          // this.boarding.push(response[1]);
-          //this.var.push(response);
-          // for(let val of this.var){
-          //   this.boarding.push(val);
-          // }
-         // alert(response[0]);
-          //this.boarding.push(response[0]);
-          alert(JSON.stringify(this.boarding));
-          //alert(this.boarding[0].stop);
-          
-          
+          //alert(JSON.stringify(this.boarding));
+         
         }
         
       );
 
       this.busService.searchStops(val.destination,val.id).subscribe(
           response => {
-            // this.response = response;
-            // this.dropping.push(this.response);
+      
             sessionStorage.setItem('destStops',JSON.stringify(response));
             this.dropping=JSON.parse(sessionStorage.getItem('destStops'));
-           //alert(JSON.stringify(response));
-           //this.dropping.push(response);
-           // alert(this.dropping[0].stop);
-          alert(JSON.stringify(this.dropping));
+         // alert(JSON.stringify(this.dropping));
         
           }
       );

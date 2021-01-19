@@ -32,14 +32,14 @@ export class PaymentComponent implements OnInit {
 
 payNow(){
 
-  alert(JSON.stringify(this.payment));
+ // alert(JSON.stringify(this.payment));
 
   
   this.paymentService.payNow(this.payment).subscribe(response =>{
     this.response = response;
   sessionStorage.setItem('transactionId',String(this.response.trasactionId));
-   alert(JSON.stringify(response));
-  alert(sessionStorage.getItem('transactionId'));
+  alert(JSON.stringify(response));
+  //alert(sessionStorage.getItem('transactionId'));
    this.router.navigate(['view-ticket']);
 
 })

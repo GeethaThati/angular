@@ -24,12 +24,12 @@ export class UpdateProfileComponent implements OnInit {
 
   ngOnInit() {
     this.userId = parseInt(sessionStorage.getItem('customerId'));
-    alert(this.userId);
+  //  alert(this.userId);
     this.profileService.profile(this.userId).subscribe(response=>
       {
       //alert(JSON.stringify(response));
       this.user=response;
-      alert(JSON.stringify(this.user));
+    //  alert(JSON.stringify(this.user));
       }
     );
   }

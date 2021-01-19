@@ -47,5 +47,8 @@ export class AdminServiceService {
   let url= "http://localhost:8080/project/api/buses";
   return this.http.get(url);
 }
-
+  viewRoutes(){
+    let url = "http://localhost:8080/project/api/routes";
+    return this.http.get(url);
+  }
 }

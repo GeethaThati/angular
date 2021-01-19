@@ -48,9 +48,9 @@ export class SearchBusComponent implements OnInit {
     return this.options.filter(option => option.toLowerCase().indexOf(filterValue) === 0);
   }
   searchBus(){
-    alert(JSON.stringify(this.search));
+    //alert(JSON.stringify(this.search));
     this.busService.searchBus(this.search).subscribe(response=>{
-     alert(JSON.stringify(response));
+     //alert(JSON.stringify(response));
     sessionStorage.setItem('routeDetails',JSON.stringify(response));
       this.router.navigate(['view-bus']);
     }

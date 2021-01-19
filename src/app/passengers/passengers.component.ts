@@ -13,7 +13,7 @@ import { Book } from '../view-bus/view-bus.component';
 })
 export class PassengersComponent implements OnInit {
 
-  seats :number[] = [];
+  seats :number[] = []; //
   booking : Booking;
   passenger : Passenger = new Passenger();
   num:number;
@@ -28,7 +28,9 @@ export class PassengersComponent implements OnInit {
 
     this.book=JSON.parse(sessionStorage.getItem('BoardingDetails'));
     this.num = this.book.noOfSeats;
+
     this.booking = new Booking(this.num);
+
     this.booking.routeId= this.book.routeId;
     this.booking.userId = parseInt(sessionStorage.getItem('customerId'));
     this.booking.boarding = this.book.boarding;
@@ -58,12 +60,12 @@ export class PassengersComponent implements OnInit {
   
   addPassenger() {
 
-  alert(JSON.stringify(this.booking));
+ // alert(JSON.stringify(this.booking));
   this.passengerService.addPassenger(this.booking).subscribe(response =>{
     this.response = response;
     //alert(JSON.stringify(response));
     sessionStorage.setItem('ticketId',String(this.response.ticketId));
-    alert(sessionStorage.getItem('ticketId'));
+    alert("Your Ticket Id is "+sessionStorage.getItem('ticketId'));
     sessionStorage.setItem('amount',String(this.book.fare));
     this.router.navigate(['payment']);
   })

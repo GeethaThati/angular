@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Login } from '../models/Login';
 import { Router } from '@angular/router';
 import { CustomerServiceService } from '../customer-service.service';
+import { BusService } from '../bus.service';
 
 @Component({
   selector: 'app-login',
@@ -13,7 +14,15 @@ export class LoginComponent {
   login: Login = new Login();
   message: string;
   response:any;
-  constructor(private customerService: CustomerServiceService, private router: Router) { }
+  constructor(private customerService: CustomerServiceService, private router: Router,private busService: BusService) { }
+
+  forgotPassword(){
+    alert(this.login.email);
+    this.busService.forgotPassword(this.login.email).subscribe(response=>{
+      alert(JSON.stringify(response));
+    });
+
+  }
 
   loginCheck() {
     console.log(this.login);

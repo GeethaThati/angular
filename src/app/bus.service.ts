@@ -45,4 +45,9 @@ export class BusService {
     return this.http.get<any>(url);
   }
 
+  forgotPassword(email:string):Observable<any>{
+    let url = "http://localhost:8081/project/api/forgotPassword?email="+email;
+    return this.http.get<any>(url);
+  }
+
 }

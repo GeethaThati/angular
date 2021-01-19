@@ -3,8 +3,8 @@
         <form (ngSubmit)="loginCheck()">
           
             <div class="container">
-              <label for="uname"><b>Username</b></label>
-              <input type="text" placeholder="Enter Username" name="uname" [(ngModel)]=login.email>
+              <label for="uname"><b>Email</b></label>
+              <input type="text" placeholder="Enter Email id" name="uname" [(ngModel)]=login.email>
           
               <label for="psw"><b>Password</b></label>
               <input type="password" placeholder="Enter Password" name="psw" [(ngModel)]=login.password >
@@ -12,10 +12,10 @@
               <button type="submit">Login</button>
 
             </div>
-          
+  
             <div class="container" style="background-color:#f1f1f1">
               <button type="button" class="cancelbtn" (click)="goBack()">Cancel</button>
-              <span class="psw">Forgot <a href="#">password?</a></span>
+              <button class="forgetBtn" (click)="forgotPassword()">Forgot password?</button>
             </div>
           </form>
 

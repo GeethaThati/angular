@@ -18,13 +18,13 @@ export class BusListComponent implements OnInit {
      
       sessionStorage.setItem('busList',JSON.stringify(response));
       this.buses = JSON.parse(sessionStorage.getItem('busList'));
-      alert(JSON.stringify(this.buses));
+     // alert(JSON.stringify(this.buses));
 
     })
   }
 
   goBack(){
-    this.router.navigate(['dashboard']);
+    this.router.navigate(['admin-options']);
   }
 
 }

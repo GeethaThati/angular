@@ -20,7 +20,7 @@ export class MyTripsComponent implements OnInit {
     this.userId = JSON.parse(sessionStorage.getItem('customerId'));
     this.busService.fetchTrips(this.userId).subscribe(response=>
       {
-        alert(JSON.stringify(response));
+        //alert(JSON.stringify(response));
         this.trip=response;
       });
   }

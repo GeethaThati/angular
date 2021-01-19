@@ -20,7 +20,7 @@ export class AddRouteComponent implements OnInit {
 
   addRoute(){
 
-    alert(JSON.stringify(this.route));
+   // alert(JSON.stringify(this.route));
     alert(JSON.stringify("Route Added Successfully"));
     this.adminService.addRoute(this.route).subscribe(response =>{
       alert(JSON.stringify(this.response));

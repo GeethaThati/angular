@@ -18,7 +18,7 @@ export class ViewTicketComponent implements OnInit {
     this.transactionId = parseInt(sessionStorage.getItem('transactionId'));
     this.ticketId = parseInt(sessionStorage.getItem('ticketId'));
     this.book = JSON.parse(sessionStorage.getItem('boardingDetails'));
-    alert(this.book);
+    //alert(this.book);
     // this.source = this.book.source;
 
   }
