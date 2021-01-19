@@ -13,7 +13,7 @@ export class PaymentComponent implements OnInit {
 
   payment : Payment = new Payment();
   book: Book = new Book();
-  
+  response : any ;
 
   constructor(private paymentService : PaymentService, private router : Router) { 
    
@@ -36,7 +36,12 @@ payNow(){
 
   
   this.paymentService.payNow(this.payment).subscribe(response =>{
+    this.response = response;
+  sessionStorage.setItem('transactionId',String(this.response.trasactionId));
    alert(JSON.stringify(response));
+  alert(sessionStorage.getItem('transactionId'));
+   this.router.navigate(['view-ticket']);
+
 })
 
   }

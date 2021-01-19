@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="details">
+    <table>
+      <div *ngFor="let route of routes">
+      <tr class="head">
+        <td>Route Id</td>
+        <td>Source</td>
+        <td>Destination</td>
+        <td>Date of Depature</td>
+        <td>Date of Arrival</td>
+      </tr>
+      <tr *ngFor="let r of route" >
+        <td>{{r[0]}}</td>
+        <td>{{r[1]}}</td>
+        <td>{{r[2]}}</td>
+        <td>{{r[3]}}</td>
+        <td>{{r[4]}}</td>
+      </tr>
+    </div>
+    </table>
+  </div>
+  <div class="btn">
+    <br>
+    <button (click)="goBack()">Go Back</button>
+  </div>
+</div>

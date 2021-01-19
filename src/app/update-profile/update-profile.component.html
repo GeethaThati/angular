@@ -12,6 +12,14 @@
 <br>
 <label>Email id</label>
 <input type="email" [(ngModel)]=this.user.email name="email"><br>
+<label for="gender">Gender</label><br>
+
+<select id="gender" name="gender" [(ngModel)]=user.gender>
+    <option value="" disabled selected>Gender</option>
+    <option>Male</option>
+    <option>Female</option>
+</select><br>
+
 <label>Contact</label>
 <input type="number" [(ngModel)]=this.user.contact name="contact"><br>
 <label>Date Of Birth</label>

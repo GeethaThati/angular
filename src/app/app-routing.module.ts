@@ -24,6 +24,8 @@ import { ProfileComponent } from './profile/profile.component';
 import { UpdateProfileComponent } from './update-profile/update-profile.component';
 import { MyTripsComponent } from './my-trips/my-trips.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
+import { ViewTicketComponent } from './view-ticket/view-ticket.component';
+import { EmailTicketComponent } from './email-ticket/email-ticket.component';
 
 
 const routes: Routes = [
@@ -53,7 +55,9 @@ const routes: Routes = [
   { path: 'dashboard/profile', component:ProfileComponent},
   { path: 'dashboard/update-profile', component:UpdateProfileComponent},
   { path: 'dashboard/my-trips', component:MyTripsComponent},
-  { path: 'dashboard/change-password',component:ChangePasswordComponent}
+  { path: 'dashboard/change-password',component:ChangePasswordComponent},
+  { path: 'view-ticket',component:ViewTicketComponent},
+  { path: 'email-ticket', component:EmailTicketComponent}
 
 ];
 
